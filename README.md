@@ -1,7 +1,5 @@
 # WebDevelopment_2024-2025
 
-![](https://futureskillsprime.in//sites/default/files/2021-04/web-development.jpg)
-
 Таблица с баллами
 # Лабораторные работы 
 
