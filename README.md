@@ -5,8 +5,9 @@
 
 <details>
   <summary>Ссылки на задания</summary>
-  1. Лаб 1
-  2. Лаб 2 
+	
+  1. [Лаб 1](tasks/)
+
 </details>
 
 ___
