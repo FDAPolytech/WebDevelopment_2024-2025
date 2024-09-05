@@ -1,6 +1,16 @@
 # WebDevelopment_2024-2025
 
 [Таблица с баллами]()
+
+<details>
+  <summary>Презентации</summary>
+	
+  1. [Галопом по web](presentations/Копия_web_lec_1.pdf)
+  2. [html](presentations/html.pptx)
+  3. [css](presentations/CSS.pptx)
+
+</details>
+
 # Лабораторные работы 
 
 <details>
