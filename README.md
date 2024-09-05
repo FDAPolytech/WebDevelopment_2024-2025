@@ -6,7 +6,7 @@
 <details>
   <summary>Ссылки на задания</summary>
 	
-  1. [Лаб 1](tasks/)
+  1. [Лаб 1](tasks/lab1)
 
 </details>
 
