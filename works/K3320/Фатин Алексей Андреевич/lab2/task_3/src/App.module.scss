@@ -1,0 +1,44 @@
+.app {
+  height: 100%;
+}
+
+.header {
+  background: #152934;
+  border-radius: 10px;
+  border: 2px solid #fff9ed;
+  padding: 10px 20px;
+  margin: 10px 20px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.button {
+  padding: 7px 14px;
+  border-radius: 15px;
+  background: #d2cccc;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.content {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 500px;
+  height: auto;
+}
