@@ -1,0 +1,90 @@
+.root {
+  width: 100%;
+  background: #fff9ed;
+  background: #152934;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  color: white;
+}
+
+.inputs {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  flex-flow: row wrap;
+}
+
+.piece__block {
+  position: relative;
+  border: 2px solid #fff9ed;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.piece__title {
+  margin-bottom: 10px;
+}
+
+.piece__input {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.button {
+  margin-top: 10px;
+  padding: 7px 14px;
+  background: #fff9ed;
+  color: black;
+  border-radius: 15px;
+  cursor: pointer;
+  animation: pulse 0.7s ease-in-out infinite;
+}
+
+.cross {
+  position: absolute;
+  background: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: -9%;
+  right: -3%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 50%;
+    height: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23000000' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 490 490' xml:space='preserve'%3E%3Cpolygon points='456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 '/%3E%3C/svg%3E");
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
