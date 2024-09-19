@@ -8,6 +8,7 @@
   1. [Галопом по web](presentations/Копия_web_lec_1.pdf)
   2. [html](presentations/html.pptx)
   3. [css](presentations/CSS.pptx)
+  4. [Git и Galp](presentations/Презентация2 Git Gulp.pdf).
 
 </details>
 
