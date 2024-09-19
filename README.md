@@ -19,6 +19,7 @@
   <summary>Ссылки на задания</summary>
 	
   1. [Лаб 1](tasks/lab1)
+  2. [Лаб 2](tasks/lab2)
 
 </details>
 
