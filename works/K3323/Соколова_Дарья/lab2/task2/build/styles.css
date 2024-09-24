@@ -1,0 +1,19 @@
+body {
+  background-color: #eeede9;
+}
+
+div {
+  margin: 30px;
+  padding: 20px;
+  border: 1px solid #d5c489;
+  text-align: center;
+}
+div .title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+div .text {
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
