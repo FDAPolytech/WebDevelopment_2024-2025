@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Viewer</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <form class="form">
+      <input type="url" placeholder="Url to the site" required>
+      <input type="number" min="1" placeholder="Number of seconds" required>
+      <input type="submit">
+    </form>
+
+    <p>Список сайтов:</p>
+    <div id="site-list">
+    </div>
+
+    <br>
+
+    <p>Текущий сайт</p>
+
+    <iframe id="frame"></iframe>
+
+    <script src="index.js"></script>
+  </body>
+</html>
