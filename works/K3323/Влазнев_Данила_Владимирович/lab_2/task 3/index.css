@@ -1,0 +1,35 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:rgb(164, 175, 209);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+}
+
+.form > * {
+  margin-bottom: 10px;
+}
+
+#frame {
+  width: 480px;
+  height: 300px;
+}
+
+#site-list {
+  background-color: white;
+  max-width: 480px;
+  max-height: 100px;
+  overflow-y: scroll;
+}
+
+#site-list > div {
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  border: 1px solid black;
+}
