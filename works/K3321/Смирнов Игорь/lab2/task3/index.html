@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page viewer</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Просмотр страниц</h1>
+    <div>
+        <iframe style="height: 500px; width: 800px;" src="demo.html" id="web-page">
+
+        </iframe>
+    </div>
+
+    <div id="buttons">
+
+        <button style="left: -150px;" onclick="prevPage();">Назад</button>
+        <button style="left: -150px;" onclick="stopAuto();">Стоп</button>
+        <button style="left: 150px;" onclick="startAuto();">Старт</button>
+        <button style="left: 150px;" onclick="nextPage();">Вперёд</button>
+        <form>
+            <button type="button" onclick="giveURL();">Добавить</button>
+        </form>
+    </div>
+    <div>
+        <form method="POST">
+            <input type="number" name="num" placeholder="Введите количество секунд" id="time"/><br/>
+            <input type="url" name="url" placeholder="Введите URL" id="URL"/>
+        </form>
+    </div>
+
+</body>
+</html>
