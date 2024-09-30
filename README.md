@@ -8,6 +8,8 @@
   1. [Галопом по web](presentations/Копия_web_lec_1.pdf)
   2. [html](presentations/html.pptx)
   3. [css](presentations/CSS.pptx)
+  4. [Git и Gulp](presentations/Презентация2%20Git%20Gulp.pdf)
+
 
 </details>
 
@@ -17,6 +19,7 @@
   <summary>Ссылки на задания</summary>
 	
   1. [Лаб 1](tasks/lab1)
+  2. [Лаб 2](tasks/lab2)
 
 </details>
 
