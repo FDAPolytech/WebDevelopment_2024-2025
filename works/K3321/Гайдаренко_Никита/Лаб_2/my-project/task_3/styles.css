@@ -1,16 +1,10 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #7295ff; 
-    margin: 0;
-    padding: 0;
 }
 
 .container {
-    width: 75%;
-    margin: 20px auto;
     background-color: #fff;
     padding: 50px;
-    border-radius: 10px;
 }
 
 h1 {
