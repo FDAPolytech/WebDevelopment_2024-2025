@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Rotator</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4;
+        }
+
+        iframe {
+            width: 80%;
+            height: 80%;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <iframe id="webFrame" src=""></iframe>
+
+    <script>
+        // Массив с URL страниц, которые нужно показать
+        const pages = [
+            "https://example.com",
+            "https://wikipedia.org",
+            "https://github.com"
+        ];
+
+        // Интервал показа страниц (в миллисекундах)
+        const interval = 5000; // 5000 мс = 5 секунд
+
+        // Индекс текущей страницы
+        let currentPageIndex = 0;
+
+        // Функция для смены страницы
+        function showNextPage() {
+            const iframe = document.getElementById('webFrame');
+            iframe.src = pages[currentPageIndex];
+            currentPageIndex = (currentPageIndex + 1) % pages.length; // Переход на следующую страницу
+        }
+
+        // Запуск показа страниц с интервалом
+        setInterval(showNextPage, interval);
+
+        // Показ первой страницы сразу при загрузке
+        showNextPage();
+    </script>
+</body>
+
+</html>
