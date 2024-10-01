@@ -1,0 +1,15 @@
+{
+  "name": "task_2",
+  "version": "1.0.0",
+  "description": "task_2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anastasiia Koroleva",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0"
+  }
+}
