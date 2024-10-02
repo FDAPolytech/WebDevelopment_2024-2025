@@ -1,0 +1,41 @@
+$primary-color: #007bff;
+$hover-color: #0056b3;
+$success-color: #28a745;
+$font-color: #666;
+$bg-color: #f0f0f0;
+
+@mixin button-style($bg-color, $hover-bg-color) {
+    background-color: $bg-color;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $hover-bg-color;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $bg-color;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    @include button-style($primary-color, $hover-color);
+}
+
+p {
+    font-size: 18px;
+    color: $font-color;
+}
