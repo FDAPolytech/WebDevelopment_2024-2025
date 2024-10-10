@@ -1,0 +1,25 @@
+$light: #eeede9;
+$textColor: brown;
+$borderColor: #d5c489;
+
+body {
+  background-color: $light;
+}
+
+div {
+  margin: 30px;
+  padding: 20px;
+  border: 1px solid $borderColor;
+  text-align: center;
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .text {
+    margin-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+  }
+}
