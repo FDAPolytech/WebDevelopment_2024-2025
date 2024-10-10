@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Показ веб-страниц</h1>
+      <form class="form">
+        <div class="input-group">
+          <label for="url">URL:</label>
+          <input type="text" id="url" placeholder="Введите URL" />
+        </div>
+
+        <div class="input-group">
+          <label for="url">Интервал (мс):</label>
+          <input type="number" id="interval" placeholder="Введите интервал" />
+        </div>
+
+        <button id="addButton">Добавить URL</button>
+        <button id="startButton">Начать слайдшоу</button>
+        <button id="stopButton">Остановить</button>
+      </form>
+
+      <div class="list"></div>
+      <iframe id="iframe" frameborder="0" src=""></iframe>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
