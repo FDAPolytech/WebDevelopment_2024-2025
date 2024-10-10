@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Обратная связь</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Форма обратной связи</h1>
+      <form action="process_feedback.php" method="post">
+        <label for="firstName">Имя:</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          required
+        /><br /><br />
+
+        <label for="lastName">Фамилия:</label>
+        <input type="text" id="lastName" name="lastName" required /><br /><br />
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="feedback">Обратная связь:</label><br />
+        <textarea
+          id="feedback"
+          name="feedback"
+          rows="5"
+          cols="50"
+          required
+        ></textarea
+        ><br />
+
+        <p>Пол:</p>
+        <input type="radio" id="male" name="gender" value="Мужчина" required />
+        <label for="male">Мужчина</label><br />
+        <input type="radio" id="female" name="gender" value="Женщина" />
+        <label for="female">Женщина</label><br />
+
+        <p>Выберите опции:</p>
+        <input type="checkbox" id="option1" name="options[]" value="Опция 1" />
+        <label for="option1">Опция 1</label><br />
+        <input type="checkbox" id="option2" name="options[]" value="Опция 2" />
+        <label for="option2">Опция 2</label><br />
+        <input type="checkbox" id="option3" name="options[]" value="Опция 3" />
+        <label for="option3">Опция 3</label><br /><br />
+
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </body>
+</html>

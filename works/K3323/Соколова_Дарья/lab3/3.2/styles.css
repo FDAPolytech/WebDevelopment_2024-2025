@@ -1,0 +1,32 @@
+body {
+  background-color: #c5c9db;
+}
+
+.container {
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #eef0f9;
+  border-radius: 30px;
+  width: 450px;
+}
+
+input,
+textarea,
+button {
+  background-color: #edeef6;
+  border: 1px solid #a5a9b8;
+  border-radius: 10px;
+  accent-color: #dbdce4;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  margin-top: 5px;
+  padding: 3px;
+  width: 100%;
+}
+
+button {
+  padding: 5px;
+}
