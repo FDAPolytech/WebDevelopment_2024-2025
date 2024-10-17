@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <title>ScrollWeb</title>
+  </head>
+  <body>
+    <div class="body__container">
+      <h1>Прокрутка веб страниц</h1>
+
+      <div class="form">
+        <label style="color: #8286e4" for="page-url">URL страниц:</label>
+        <input type="text" id="page-url" placeholder="Введите URL страницы" />
+      </div>
+
+      <div class="form__group">
+        <label style="color: #8286e4" for="interval"
+          >Интервал показа (в секундах):</label
+        >
+        <input
+          type="number"
+          id="interval"
+          min="1"
+          placeholder="Введите интервал"
+        />
+      </div>
+      <div class="contBtn">
+        <button id="addPage">Добавить страницу</button>
+        <button id="start">Начать показ</button>
+        <button id="delete">Удалить старницу из показа</button>
+      </div>
+
+      <div id="page-list" class="page-list"></div>
+
+      <div class="page__container">
+        <div class="page__container__page">
+          <iframe id="iframe" width="100%" height="500px"></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
