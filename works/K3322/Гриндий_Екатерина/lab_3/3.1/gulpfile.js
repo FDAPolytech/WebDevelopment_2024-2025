@@ -1,27 +1,26 @@
-var gulp = require("gulp"), // подключаем Gulp
-  sass = require("gulp-sass")(require("sass")), // подключаем Sass пакет,
-  browserSync = require("browser-sync").create(); // подключаем Browser Sync
+var gulp = require("gulp"),
+  sass = require("gulp-sass")(require("sass")),
+  browserSync = require("browser-sync").create();
 
-// Задача для обработки SCSS
 gulp.task("sass", function () {
   return gulp
-    .src("build/scss/**/*.scss") // берем источник .scss файлов
-    .pipe(sass().on("error", sass.logError)) // преобразуем SCSS в CSS
-    .pipe(gulp.dest("build/css")) // выгружаем результата в папку app/css
-    .pipe(browserSync.reload({ stream: true })); // обновляем CSS на странице при изменении
+    .src("build/scss/**/*.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("build/css"))
+    .pipe(browserSync.reload({ stream: true }));
 });
 
-// Задача для запуска BrowserSync
+// Ззапуск BrowserSync
 gulp.task("browser-sync", function () {
   browserSync.init({
     server: {
-      baseDir: "build", // директория для сервера - app
+      baseDir: "build",
     },
-    notify: false, // отключаем уведомления
+    notify: false, //уведы
   });
 });
 
-// Задача для обновления HTML
+// обновляем html
 gulp.task("code", function () {
   return gulp.src("build/*.html").pipe(browserSync.reload({ stream: true }));
 });
