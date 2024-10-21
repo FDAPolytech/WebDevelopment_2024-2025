@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление списком URL</title>
+    <link rel="stylesheet" href="css/style_url.css">
+</head>
+<body>
+    <h1>Super URL Opener</h1>
+
+    <!-- Поле для ввода URL -->
+    <input type="text" id="urlInput" placeholder="Введите URL">
+
+    <!-- Кнопка добавления URL в список -->
+    <button onclick="addUrl()">+</button>
+
+    <!-- Список URL -->
+    <ul id="urlList"></ul>
+
+    <!-- Поле для ввода интервала показа-->
+    <input type="number" id="delayInput" placeholder="Введите задержку(с)">
+
+    <!-- Кнопка отправки -->
+    <button onclick="startProcess(); cleanData()">Отправить</button>
+
+    <script src="utils.js"></script>
+</body>
+</html>
