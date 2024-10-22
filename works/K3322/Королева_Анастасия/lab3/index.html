@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Viewer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form action="feedback.php" method="POST">
+        <label for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+      
+        <label for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+      
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required><br><br>
+      
+        <label for="feedback">Обратная связь:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea><br><br>
+      
+        <label>Выберите категорию:</label><br>
+        <input type="radio" id="category1" name="category" value="вопрос" required>
+        <label for="category1">Вопрос</label><br>
+        <input type="radio" id="category2" name="category" value="предложение" required>
+        <label for="category2">Предложение</label><br><br>
+      
+        <label>Какие услуги вас интересуют?</label><br>
+        <input type="checkbox" id="service1" name="services[]" value="услуга1">
+        <label for="service1">Услуга 1</label><br>
+        <input type="checkbox" id="service2" name="services[]" value="услуга2">
+        <label for="service2">Услуга 2</label><br>
+        <input type="checkbox" id="service3" name="services[]" value="услуга3">
+        <label for="service3">Услуга 3</label><br><br>
+      
+        <input type="submit" value="Отправить">
+      </form>      
+  </body>
+</html>
