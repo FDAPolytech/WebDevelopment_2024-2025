@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Kolomiets Alice task 3</title>
+</head>
+<body>
+    <h1> Введите ссылку на сайт и время показа: </h1>
+    <form class="form">
+        <input type="url" placeholder="Введите ссылку" required>
+        <input type="number" placeholder="Введите время" required>
+        <input type="submit">
+    </form>
+    <p>Сайты, которые вы ввели: </p>
+    <div class="urls" id="sites"></div>
+    <p>Сайт: </p>
+    <iframe id="frame" title="site"></iframe>
+    <script src="script.js"></script>
+</body>
+</html>
