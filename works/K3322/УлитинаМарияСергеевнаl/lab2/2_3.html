@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Показ web-страниц</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Показ web-страниц</h1>
+      <form class="form">
+        <div class="input-group">
+          <label for="url">Введите URL web-страниц</label>
+          <input type="text" id="url" placeholder="Введите URL" />
+        </div>
+
+        <div class="input-group">
+          <label for="url">Введите интервал показа web-страницы(мс):</label>
+          <input type="number" id="interval" placeholder="Введите интервал" />
+        </div>
+
+        <button id="addButton">Добавить web-страницу</button>
+        <button id="startButton">Начать показ web-страниц</button>
+      </form>
+
+      <div class="list"></div>
+      <iframe id="iframe" frameborder="0" src=""></iframe>
+    </div>
+    <script src="2_3.js"></script>
+  </body>
+</html>

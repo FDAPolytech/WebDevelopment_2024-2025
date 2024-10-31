@@ -1,0 +1,47 @@
+body {
+  font-family: Arial;
+  background-color: #000000;
+}
+.container {
+  margin: 30px;
+  padding: 30px;
+  background-color: #808080;
+  border-radius: 30px;
+}
+h1 {
+  text-align: center;
+  font-size: 20px;
+  color: #000000;
+}
+
+iframe {
+  width: 100%;
+  height: 60vh;
+  border: 1px solid #ccc;
+}
+label {
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+input {
+  padding: 10px;
+  width: 97%;
+  background-color: #ffffff;
+  margin: 10px;
+}
+button {
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+}
+.list {
+  font-size: 14px;
+  border-left: 1px solid #b5b3b3;
+  padding-left: 10px;
+  margin: 10px 0;
+  width: 100%;
+}
