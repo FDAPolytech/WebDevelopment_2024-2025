@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр веб-страниц</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Просмотр веб-страниц одна за другой</h1>
+        
+        <div class="card">
+            <h2>Добавьте сайт</h2>
+            <label for="urlInput">Адрес сайта:</label>
+            <input type="text" id="urlInput" placeholder="https://example.com">
+            <button id="addButton">Добавить сайт</button>
+        </div>
+        
+        <div class="card">
+            <label for="intervalInput">Интервал показа (в секундах):</label>
+            <input type="number" id="intervalInput" min="1" value="5">
+            <button id="startButton">Начать просмотр</button>
+            <button id="stopButton">Остановить просмотр</button>
+            <button id="clearButton">Очистить список сайтов</button>
+        </div>
+        
+        <div class="card" id="siteList">
+            <h2>Список сайтов для просмотра:</h2>
+            <ul id="urls"></ul>
+        </div>
+        
+        <div id="viewer" class="card" style="display: none;">
+            <h2>Просмотр сайта:</h2>
+            <iframe id="iframeViewer" width="100%" height="600px"></iframe>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
