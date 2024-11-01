@@ -1,0 +1,10 @@
+.main {
+  padding: 0;
+}
+.main .inner {
+  margin: 0;
+}
+
+header {
+  background-color: aqua;
+}
