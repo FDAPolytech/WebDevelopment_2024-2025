@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Feedback Form</h1>
+  <form action="process.php" method="post">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="feedback">Feedback:</label><br>
+    <textarea id="feedback" name="feedback" rows="4" required></textarea><br><br>
+
+    <label>Contact Preference:</label><br>
+    <input type="radio" id="contactEmail" name="contactPreference" value="Email" required>
+    <label for="contactEmail">Email</label><br>
+    <input type="radio" id="contactPhone" name="contactPreference" value="Phone">
+    <label for="contactPhone">Phone</label><br><br>
+
+    <label>Topics of Interest:</label><br>
+    <input type="checkbox" id="topic1" name="topics[]" value="Products">
+    <label for="topic1">Products</label><br>
+    <input type="checkbox" id="topic2" name="topics[]" value="Services">
+    <label for="topic2">Services</label><br>
+    <input type="checkbox" id="topic3" name="topics[]" value="Support">
+    <label for="topic3">Support</label><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
