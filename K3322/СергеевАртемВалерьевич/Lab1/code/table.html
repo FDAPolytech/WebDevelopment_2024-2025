@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Table Example</title>
+</head>
+<body>
+<table>
+			  <! - -<colgroup span = "3" style = "background-color:silver"/> 
+  	<colgroup>
+     <col style="background-color:silver">
+     <col span="2"style="background-color:yellow">
+	</colgroup>
+
+		   <thead style = "color:green; background-color:lavender">
+   <tr>
+      				<th>Месяц</th>
+     				 <th>Продажи</th>
+   				   <th>Менеджер</th>
+   			</tr>
+  		 </thead>
+   <tfoot style = "color:blue">
+  			 <tr>
+  			     <td>Итого</td>
+   			    <td colspan = "2" style= "text-align:right">170 000</td>
+			</tr>
+   </tfoot>
+   <tbody style = "color:red">
+   			<tr>
+ 			     <td>Ноябрь</td>
+ 			     <td>70 000</td>
+			     <td>Шашкин</td>
+ 	</tr>
+ 		          <tr>
+      			 <td>Декабрь</td>
+     			  <td>100 000</td>
+			   <td>Пупкин</td>
+       </tr>
+   </tbody>
+</table> 
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Работа с таблицами</title>
+</head>
+<body>
+<table>
+	<tr>
+		<td>Фамилия</td>
+		<td>Имя</td>
+		<td>Отчество</td>
+		<td>Город</td>
+	</tr>
+	<tr>
+		<td>Пупкин</td>
+		<td>Василий</td>
+		<td>Петрович</td>
+		<td>Москва</td>
+	</tr>
+	<tr>
+		<td>Пупкин</td>
+		<td>Феофан</td>
+		<td>Васильевич</td>
+		<td>Москва</td>
+	</tr>
+	<tr>
+		<td>Шашкин</td>
+		<td>Сидор</td>
+		<td>Богданович</td>
+		<td>Санкт-Петербург</td>
+	</tr>
+	<tr>
+		<td>Лютикова</td>
+		<td>Аделина</td>
+		<td>Федоровна</td>
+		<td>Тверь</td>
+	</tr>
+</table>
+</body>
+</html>
+
+
+	<tr>
+	<th>Фамилия</th>
+	<th>Имя</th>
+	<th>Отчество</th>
+	<th>Город</th>
+	</tr>
+
+	<table border="2" style="width: 80%">
+		<caption style="caption-side:bottom">Список сотрудников</caption>
+	</table>
+
+
+	<tr>
+		<td colspan="3">Лютикова Аделина Федоровна</td>
+		<td>Тверь</td>
+	</tr>
+
+
+	<tr>
+		<td rowspan="2">Пупкин</td>
+		<td>Василий</td>
+		<td>Петрович</td>
+		<td rowspan="2">Москва</td>
+	</tr>
+	<tr>
+		<td><!-- В этом ряду удалены две ячейки --></td>
+		<td>Феофан</td>
+		<td>Васильевич</td>
+	</tr>
