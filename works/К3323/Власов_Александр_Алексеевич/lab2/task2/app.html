@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Rotator</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4;
+        }
+
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <iframe id="webFrame" src=""></iframe>
+
+    <script>
+        const pages = [
+            "https://example.com",
+            "https://wikipedia.org",
+            "https://github.com"
+        ];
+
+        const interval = 5000;
+
+        let currentPageIndex = 0;
+
+        function showNextPage() {
+            const iframe = document.getElementById('webFrame');
+            iframe.src = pages[currentPageIndex];
+            currentPageIndex = (currentPageIndex + 1) % pages.length;
+        }
+
+        setInterval(showNextPage, interval);
+
+        showNextPage();
+    </script>
+</body>
+
+</html>
