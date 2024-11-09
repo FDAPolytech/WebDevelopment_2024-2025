@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Feedback form</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Feedback form</h1>
+    <form action="/lab3/php/feedback.php" method="post">
+      <label for="first_name">First Name:</label>
+      <input type="text" id="first_name" name="first_name" required><br><br>
+
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="last_name" name="last_name" required><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label>Where are you from?</label><br>
+      <input type="radio" id="location-saint-petersburg" name="location" value="saint-petersburg" required>
+      <label for="location-saint-petersburg">Saint-Petersburg</label><br>
+
+      <input type="radio" id="location-moscow" name="location" value="moscow">
+      <label for="location-moscow">Moscow</label><br><br>
+
+      <label>Do you agree with our policies?</label><br>
+      <input type="checkbox" id="first-policy" name="first-policy" required>
+      <label for="first-policy">First policy</label><br>
+
+      <input type="checkbox" id="second-policy" name="second-policy" required>
+      <label for="second-policy">Second policy</label><br>
+
+      <input type="checkbox" id="third-policy" name="third-policy">
+      <label for="third-policy">Third policy</label><br><br>
+
+      <input type="submit" value="Submit Feedback">
+  </form>
+  </body>
+</html>
