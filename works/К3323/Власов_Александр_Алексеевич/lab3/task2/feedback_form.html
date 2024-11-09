@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+</head>
+
+<body>
+
+    <h2>Форма обратной связи</h2>
+
+    <form action="process_feedback.php" method="post">
+        <label for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" required>
+        <br><br>
+
+        <label for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" required>
+        <br><br>
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="feedback">Обратная связь:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+        <br><br>
+
+        <p>Выберите тип обращения:</p>
+        <input type="radio" id="inquiry" name="contact_type" value="Запрос информации" required>
+        <label for="inquiry">Запрос информации</label><br>
+        <input type="radio" id="complaint" name="contact_type" value="Жалоба" required>
+        <label for="complaint">Жалоба</label>
+        <br><br>
+
+        <p>Выберите интересующие темы:</p>
+        <input type="checkbox" id="topic1" name="topics[]" value="Тема 1">
+        <label for="topic1">Тема 1</label><br>
+        <input type="checkbox" id="topic2" name="topics[]" value="Тема 2">
+        <label for="topic2">Тема 2</label><br>
+        <input type="checkbox" id="topic3" name="topics[]" value="Тема 3">
+        <label for="topic3">Тема 3</label><br>
+        <br>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+</body>
+
+</html>
