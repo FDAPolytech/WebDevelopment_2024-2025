@@ -1,7 +1,9 @@
 {
   "type": "module",
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-imagemin": "^9.1.0"
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^7.1.0"
   }
 }

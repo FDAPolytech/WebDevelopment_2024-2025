@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import imagemin, { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
+import imagemin, { optipng } from 'gulp-imagemin';
 
 // Таск для оптимизации изображений
 function images() {
