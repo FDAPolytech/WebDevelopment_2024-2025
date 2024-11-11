@@ -8,11 +8,13 @@
     "hello": "gulp hello",
     "bye": "gulp bye",
     "orderTasks": "gulp orderTasks",
-    "parallelTasks": "gulp parallelTasks"
+    "parallelTasks": "gulp parallelTasks",
+    "startWeb": "gulp startWeb"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^3.0.3",
     "gulp": "^5.0.0"
   }
 }
