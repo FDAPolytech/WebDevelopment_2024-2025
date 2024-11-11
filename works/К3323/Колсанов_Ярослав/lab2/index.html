@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Просмотр веб-страниц</h1>
+        
+        <label for="urlInput">Введите ссылку:</label>
+        <input type="url" id="urlInput" placeholder="https://example.com">
+        
+        <label for="intervalInput">Введите временной интервал:</label>
+        <input type="number" id="intervalInput" placeholder="5" min="1">
+
+        <button id="addPageButton">Добавить страницу</button>
+
+        <h2>Список</h2>
+        <ul id="pagesList"></ul>
+        
+        <button id="startSlideshowButton">Начать показ</button>
+        <button id="stopSlideshowButton" disabled>Закончить показ</button>
+
+        <div id="pageViewer">
+            <iframe id="iframe" width="800" height="600" style="border: 1px solid #ccc;" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
