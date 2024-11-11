@@ -1,0 +1,18 @@
+{
+  "name": "gulp_tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hello": "gulp hello",
+    "bye": "gulp bye",
+    "orderTasks": "gulp orderTasks",
+    "parallelTasks": "gulp parallelTasks"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  }
+}
