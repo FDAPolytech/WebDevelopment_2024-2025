@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Viewer</title>
+    <link rel="stylesheet" href="styles_br_web.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Просмотр Web-страниц по заданным URL</h1>
+
+        <!-- Форма для ввода списка URL -->
+        <div class="input-container">
+            <input id="url-input" placeholder="Введите URL (по одному на строку)">
+            <button id="add-url-button">Добавить ссылку</button>
+			<button id="load-button">Начать показ</button>
+            <button id="stop-button">Остановить показ</button>
+            <br>
+            <br>
+            <label for="interval-input">Интервал (в секундах):</label>
+            <input type="number" id="interval-input" value="5" min="1" step="1" />
+           
+            
+            <br>
+
+        </div>
+
+        <div class="url-list-container">
+            <h3>Введённые ссылки:</h3>
+            <ul id="url-list"></ul>
+        </div>
+
+        <!-- Iframe для отображения веб-страницы -->
+        <div class="iframe-container">
+            <iframe id="webpage" width="80%" height="600px"></iframe>
+        </div>
+    </div>
+
+    <script src="script_br_web.js"></script>
+</body>
+</html>
