@@ -22,25 +22,23 @@ $comment = $_POST['comment'];
 try {
   $conn->begin_transaction();
 
-  $sql = "INSERT INTO customers (name, lastname, patronymic, address, phone, email) 
+  $sql_customer = "INSERT INTO customers (name, lastname, patronymic, address, phone, email) 
           VALUES (?, ?, ?, ?, ?, ?)";
-  $stmt = $conn->prepare($sql);
-  $stmt->bind_param("ssssss", $name, $lastname, $patronymic, $address, $phone, $email);
-  $stmt->execute();
+  $stmt_customer = $conn->prepare($sql_customer);
+  $stmt_customer->bind_param("ssssss", $name, $lastname, $patronymic, $address, $phone, $email);
+  $stmt_customer->execute();
 
   // Get the last inserted customer ID
   $customer_id = $conn->insert_id;
 
-  // Insert into customer_products table for each selected product
+  $sql_product = "INSERT INTO customer_products (customer_id, product_id, comment) VALUES (?, ?, ?)";
+  $stmt_product = $conn->prepare($sql_product);
   foreach ($products as $product_id) {
-      $sql = "INSERT INTO customer_products (customer_id, product_id) VALUES (?, ?)";
-      $stmt = $conn->prepare($sql);
-      $stmt->bind_param("ii", $customer_id, $product_id);
-      $stmt->execute();
+      $stmt_product->bind_param("iis", $customer_id, $product_id, $comment);
+      $stmt_product->execute();
   }
 
   $conn->commit();
-  $stmt->close();
   echo "Data saved successfully";
 }
 catch (Exception $e) {
@@ -50,5 +48,4 @@ catch (Exception $e) {
 finally {
   $conn->close();
 }
-
 ?>
