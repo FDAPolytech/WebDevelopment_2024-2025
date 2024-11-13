@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Save Data to MySQL</title>
+</head>
+<body>
+    <form action="save_form.php" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="lastname">Last Name:</label><br>
+        <input type="text" name="lastname" id="lastname" required><br>
+
+        <label for="patronymic">Patronymic:</label><br>
+        <input type="text" name="patronymic" id="patronymic"><br>
+
+        <label for="address">Address:</label><br>
+        <input type="text" name="address" id="address" required><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="tel" name="phone" id="phone" required><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" id="email" required><br>
+
+        <label for="products">Products:</label><br>
+        <select name="products[]" id="products" multiple>
+            <option value="1">Product 1</option>
+            <option value="2">Product 2</option>
+            <option value="3">Product 3</option>
+        </select><br>
+
+        <label for="comment">Comment:</label><br>
+        <textarea name="comment" id="comment" rows="3"></textarea><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
