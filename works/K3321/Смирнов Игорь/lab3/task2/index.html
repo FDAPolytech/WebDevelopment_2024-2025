@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+</head>
+<body>
+    <h1>Обратная связь</h1>
+<div>
+    <form method="post" action="script.php">
+        <label for="name">Имя</label><br>
+        <input type="text"  id="name" name="name" required><br>    
+        <label for="lastname">Фамилия</label><br>
+        <input type="text" id="lastname" name="lastname" required><br>          
+        <label for="email">Электронная почта</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="txtarea">Сообщение</label><br>
+        <textarea rows="4" cols="50" id="txtarea" name="txtarea" required>Введите текст здесь</textarea><br>
+        <label>Ваш тип покупателя</label><br>
+        <p><input name="radiobtn" type="radio" value="Опт"> Опт</p>
+        <p><input name="radiobtn" type="radio" value="Розница"> Розница</p>
+        <label>Что вы покупали</label><br>
+        <p><input name="checkbtn[]" type="checkbox" value="Халаты"> Халаты</p>
+        <p><input name="checkbtn[]" type="checkbox" value="Футболки"> Футболки</p>
+        <p><input name="checkbtn[]" type="checkbox" value="Майки"> Майки</p>
+        <input type="submit" value="Отправить">
+        <button id="btn-get" formaction="script.php" formmethod="get">Отправить Get</button>
+    </form>
+</div>
+</body>
+</html>
