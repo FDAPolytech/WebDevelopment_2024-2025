@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        .rating input[type="radio"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Обратная связь о предмете</h1>
+    <form action="feedback_processing.php" method="POST">
+        
+        <!-- Личные данные -->
+        <label for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+    
+        <label for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+    
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required><br><br>
+    
+        <!-- Оценка курса -->
+        <label for="course_rating">Оценка курса:</label><br>
+        <div class="rating">
+            <input type="radio" id="rating_1" name="course_rating" value="1" required>
+            <label for="rating_1">1</label>
+            <input type="radio" id="rating_2" name="course_rating" value="2">
+            <label for="rating_2">2</label>
+            <input type="radio" id="rating_3" name="course_rating" value="3">
+            <label for="rating_3">3</label>
+            <input type="radio" id="rating_4" name="course_rating" value="4">
+            <label for="rating_4">4</label>
+            <input type="radio" id="rating_5" name="course_rating" value="5">
+            <label for="rating_5">5</label>
+        </div><br><br>
+    
+        <!-- Пожелания и предложения -->
+        <label for="suggestions">Пожелания и предложения по улучшению курса:</label><br>
+        <textarea id="suggestions" name="suggestions" rows="4" cols="50"></textarea><br><br>
+    
+        <!-- Интересующие темы -->
+        <label>Какие темы вам хотелось бы изучить подробнее?</label><br>
+        <input type="checkbox" id="topic_1" name="topics[]" value="Тема 1">
+        <label for="topic_1">Тема 1</label><br>
+        <input type="checkbox" id="topic_2" name="topics[]" value="Тема 2">
+        <label for="topic_2">Тема 2</label><br>
+        <input type="checkbox" id="topic_3" name="topics[]" value="Тема 3">
+        <label for="topic_3">Тема 3</label><br>
+        <input type="checkbox" id="topic_4" name="topics[]" value="Тема 4">
+        <label for="topic_4">Тема 4</label><br>
+        <input type="checkbox" id="topic_5" name="topics[]" value="Тема 5">
+        <label for="topic_5">Тема 5</label><br><br>
+    
+        <!-- Кнопки для отправки через POST и GET -->
+        <input type="submit" name="submit" value="Отправить (POST)">
+        <input type="submit" name="submit_get" value="Отправить (GET)" formaction="feedback_processing.php" formmethod="get">
+    </form>
+    
+</body>
+</html>
