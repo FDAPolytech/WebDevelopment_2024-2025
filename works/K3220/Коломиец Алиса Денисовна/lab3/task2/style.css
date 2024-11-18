@@ -1,0 +1,37 @@
+*{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(174, 243, 178);
+    border-radius: 50px;
+    flex-direction: column;
+    min-width: 400px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.c-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.c-column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.label{
+
+}
+
+.input{
+
+}

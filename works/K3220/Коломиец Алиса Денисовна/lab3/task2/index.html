@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form action="send_feedback.php" method="POST" class="form">
+        <h2>Форма обратной связи</h2>
+        <label class="label" for="name">Имя:</label>
+        <input class="input" type="text" id="name" name="name" required>
+
+        <label class="label" for="lastname">Фамилия:</label>
+        <input class="input" type="text" id="lastname" name="lastname" required>
+
+        <label class="label" for="mail">Электронная почта:</label>
+        <input class="input" type="email" id="mail" name="mail" required>
+
+        <label class="label" for="feedback">Ваше сообщение:</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+        <div class="c-row">
+        <fieldset class="c-column">
+            <legend>Как вы узнали о нашей компании?</legend>
+            <label class="label">
+                <input type="radio" name="source" value="социальные сети" required> Через социальные сети
+            </label>
+            <label class="label">
+                <input type="radio" name="source" value="друзья">Услышали от знакомых
+            </label>
+            <label class="label">
+                <input type="radio" name="source" value="интернет"> Увидели в интернете
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Как с вами можно связаться?</legend>
+            <label class="label">
+                <input type="checkbox" name="contacts[]" value="tg"> Telegram
+            </label>
+            <label class="label">
+                <input type="checkbox" name="contacts[]" value="Twitter"> Twitter
+            </label>
+            <label class="label">
+                <input type="checkbox" name="contacts[]" value="inst"> Instagram
+            </label>
+        </fieldset>
+    </div>
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
