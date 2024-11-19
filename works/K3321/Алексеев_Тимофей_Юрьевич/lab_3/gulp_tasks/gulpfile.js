@@ -1,5 +1,6 @@
 var gulp = require('gulp'); 
 const browserSync = require('browser-sync').create();
+const connect = require('gulp-connect-php');
 
 gulp.task('hello', function(done) {
     console.log('Hello, my dear editor!');
@@ -22,7 +23,7 @@ gulp.task('scripts', function () {
     return gulp.src('app/script.js').pipe(browserSync.stream());
 });
 
-gulp.task('server', function () {
+gulp.task('startWeb', function () {
     browserSync.init({
         server: {
             baseDir: 'app'
@@ -33,4 +34,3 @@ gulp.task('server', function () {
     gulp.watch('app/script.js').on('change', browserSync.reload);
 });
 
-gulp.task('startWeb', gulp.series(gulp.parallel('html', 'scripts'), 'server'));
