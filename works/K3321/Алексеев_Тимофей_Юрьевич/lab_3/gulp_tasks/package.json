@@ -1,0 +1,21 @@
+{
+  "name": "gulp_tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hello": "gulp hello",
+    "bye": "gulp bye",
+    "orderTasks": "gulp orderTasks",
+    "parallelTasks": "gulp parallelTasks",
+    "startWeb": "gulp startWeb"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0",
+    "gulp-connect-php": "^1.0.3"
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+</head>
+<body>
+    <h2>Форма обратной связи</h2>
+    <form action="start_post.php" method="post">
+        <p>Имя:</p> 
+        <input type="text" name="first-name">
+        <p>Фамилия:</p>
+        <input type="text" name="second-name">
+        <p>Email:</p> 
+        <input type="email" name="email">
+        <p>Обратная связь:</p>
+        <textarea name="feedback" cols="20" row="20"></textarea>
+
+        <p>Оцените общее впечатление от мероприятия от 0 до 5:</p>
+        <input type="radio" name="experience" value="0">0<br> 
+        <input type="radio" name="experience" value="1">1<br> 
+        <input type="radio" name="experience" value="2">2<br> 
+        <input type="radio" name="experience" value="3">3<br> 
+        <input type="radio" name="experience" value="4">4<br> 
+        <input type="radio" name="experience" value="5">5<br> 
+
+        <p>Выберите аспекты мероприятия, которые понравились вам особенно:</p>
+        <input type="checkbox" name="point[]" value="competition" />Конкурсная программа<br> 
+        <input type="checkbox" name="point[]" value="meal" />Фуршет<br>
+        <input type="checkbox" name="point[]" value="education" />Образовательная часть<br>
+        <input type="checkbox" name="point[]" value="party" />Вечеринка после закрытия<br>
+        <br>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
