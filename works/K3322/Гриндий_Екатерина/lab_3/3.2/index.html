@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Обратная связь</title>
+    <style>
+      form {
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background: antiquewhite;
+    "
+  >
+    <h2 style="color: blue">Форма обратной связи</h2>
+    <form action="feedback_handler.php" method="POST">
+      <label for="first_name">Имя:</label><br />
+      <input
+        type="text"
+        id="first_name"
+        name="first_name"
+        required
+      /><br /><br />
+
+      <label for="last_name">Фамилия:</label><br />
+      <input type="text" id="last_name" name="last_name" required /><br /><br />
+
+      <label for="email">Электронная почта:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="feedback">Напишите о вашем опыте работы:</label><br />
+      <textarea
+        id="feedback"
+        name="feedback"
+        rows="4"
+        cols="50"
+        required
+      ></textarea
+      ><br /><br />
+
+      <label>Какие направления вас интересуют больше?</label><br />
+      <input type="checkbox" id="option1" name="services[]" value="FRONTEND" />
+      <label for="option1">FRONTEND</label><br />
+
+      <input type="checkbox" id="option3" name="services[]" value="BACKEND" />
+      <label for="option3">BACKEND</label><br />
+
+      <input type="checkbox" id="option4" name="services[]" value="ML" />
+      <label for="option4">ML</label><br />
+
+      <input
+        type="checkbox"
+        id="option2"
+        name="services[]"
+        value="DataScience"
+      />
+      <label for="option2">DataScience</label><br /><br />
+
+      <label>Из какого вы университета?</label><br />
+      <input type="radio" id="radio1" name="source" value="ITMO" />
+      <label for="radio1">ИТМО</label><br />
+      <input type="radio" id="radio2" name="source" value="LETY" />
+      <label for="radio2">ЛЭТИ</label><br />
+      <input type="radio" id="radio3" name="source" value="GASU" />
+      <label for="radio3">СПБ ГАСУ</label><br /><br />
+
+      <input type="submit" value="Отправить" />
+    </form>
+  </body>
+</html>
