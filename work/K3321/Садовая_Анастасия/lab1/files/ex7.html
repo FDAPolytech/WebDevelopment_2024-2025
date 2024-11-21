@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset=”utf-8">
+  <title>Форма</title>
+ </head>
+ <body>
+<html>
+<head>
+<title> Test Form </title>
+</head>
+<body>
+		<p>Основные элементы форм:</p>
+		<form action = "ex7.html" method = "POST" enctype = "multipart/form-data">
+		Простое текстовое поле: <input type = "text" name = "txtField" /><br />
+	Поле длинной максимум 5 символов: <input type = "text" name = "txtField" maxlength = "5" /><br />
+	Многострочное текстовое поле:<br />
+	<textarea name = "txtArea">This is a text area</textarea><br />
+	<input type = "submit" name = "submit" value = "Отправить!" />
+	Поле для ввода пароля:<input type = "password" name = "psw" /><br />
+Скрытое поле: <input type = "hidden" name = "hdnTxt"></br>
+		
+		
+<form>
+	Работа с цветом:<input type = "color" name = "color"/><br/>
+	Работа с датой:<input type = "date" name = "date"/><br/>
+	Проверка e-mail:<input type = "email" name = "mail"/><br/>
+	Проверка чисел:<input type = "number" name = "num"/><br/>
+	Работа с днем недели:<input type = "week" name = "week"/><br/>
+	Проверка URL:<input type = "url" name = "url"/><br/>
+	<input type = "submit" name = "submit" value = "Отправить!" />
+	</form>
+
+<form>
+	Введите данные:<input type = "text" name = "txt"><br/>
+	<input type = "reset" name = "reset" value = "Очистить поле!" /><br />
+	<input type = "submit" name = "submit" value = "Отправить!" /><br />
+	</form>
+<input type = "button" name = "MyButton" value = "Просто кнопка"/><br />
+<button name = "myButton">
+		<img src = "enot.jpg" title = "This is a button too">
+</button>
+
+
+<form>
+	<p><input type = "radio" name = "MyRadio" value = "First">First Variant</p>
+	<p><input type = "radio" name = "MyRadio" value = "Second">Second Variant</p>
+	<p><input type = "radio" name = "MyRadio" value = "Third">Third Variant</p>
+	<p><input type = "submit" name = "submit">
+</form>
+
+<form>
+<p><input type = "checkbox" name = "MyChckBx[]" value = "First">First Variant</p>
+<p><input type = "checkbox" name = "MyChckBx[]" value = "Second">Second Variant</p>
+<p><input type = "checkbox" name = "MyChckBx[]" value = "Third">Third Variant</p>
+<p><input type = "submit" name = "submit">
+  </form>
+
+</form>
+
+
+    <form>
+		<select name = "cars" size = "1">
+			<optgroup label = "Ford">
+				<option value = "F">Focus</option>
+				<option value = "M">Mondeo</option>
+				<option value = "K">Kuga</option>
+			</optgroup>
+			<optgroup label = "Volkswagen">
+				<option value = "G">Golf</option>
+				<option value = "B">Beetle</option>
+				<option value = "P">Passat</option>
+			</optgroup>
+			<optgroup label = "Chevrolet">
+				<option value = "Cr">Cruze</option>
+				<option value = "Cam">Camaro</option>
+				<option value = "Cor">Corvette</option>
+			</optgroup>	
+		</select>
+<input type = "submit" name = "submit" />
+     </form>
+
+<form>
+		<input type = "file" name = "files" multiple>
+	</form>
+
+
+</body>
+</html>
+
+ </body>
+</html>
