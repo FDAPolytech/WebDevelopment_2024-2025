@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h2>Обратная связь</h2>
+    <form action="index.php" method="POST">
+        <label for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="feedback">Отзыв:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+
+        <label>Выберите вашу оценку:</label><br>
+        <input type="radio" id="rating_good" name="rating" value="★★★★★" required>
+        <label for="rating_good">★★★★★</label><br>
+        <input type="radio" id="rating_bad" name="rating" value="★★★★">
+        <label for="rating_bad">★★★★</label><br>
+        <input type="radio" id="rating_bad" name="rating" value="★★★">
+        <label for="rating_bad">★★★</label><br>
+        <input type="radio" id="rating_bad" name="rating" value="★★">
+        <label for="rating_bad">★★</label><br>
+        <input type="radio" id="rating_bad" name="rating" value="★">
+        <label for="rating_bad">★</label><br><br>
+
+        <label>Укажите свои предпочтения:</label><br>
+        <input type="checkbox" id="updates" name="preferences[]" value="Получать обновления">
+        <label for="updates">Получать обновления</label><br>
+        <input type="checkbox" id="news" name="preferences[]" value="Получать новости">
+        <label for="news">Получать новости</label><br>
+        <input type="checkbox" id="offers" name="preferences[]" value="Получать специальные предложения">
+        <label for="offers">Получать специальные предложения</label><br><br>
+
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
