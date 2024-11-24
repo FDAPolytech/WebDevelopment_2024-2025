@@ -1,0 +1,22 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "description": "lab2",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/maxim-shestakov/WebDevelopment_2024-2025.git"
+  },
+  "author": "Maxim Shestakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxim-shestakov/WebDevelopment_2024-2025/issues"
+  },
+  "homepage": "https://github.com/maxim-shestakov/WebDevelopment_2024-2025#readme",
+  "dependencies": {
+    "browser-sync": "^3.0.3"
+  }
+}
