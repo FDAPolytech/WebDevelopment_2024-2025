@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/second.css">
+    <title>Second task</title>
+</head>
+<body>
+    <form action="script.php" method="post">
+        <h2>Форма регистрации</h2>
+        Введите имя: <input type="text" id="name" name="name">  </br>
+        Введите фамилию: <input type="text" id="surname" name="surname"> </br>
+        Почта: <input type="text" id="email" name="email"></br>
+        Род деятельности: </br>
+        <input type="radio" id="option1" name="radio-options" value="student">Студент </br>
+        <input type="radio" id="option2" name="radio-options" value="employee">Сотрудник</br>
+        <input type="radio" id="option3" name="radio-options" value="other">Другое</br>
+        Увлечения:</br>
+        <input type="checkbox" id="option4" name="check-options[]" value="sport">Спорт</br>
+        <input type="checkbox" id="option5" name="check-options[]" value="music">Музыка</br>
+        <input type="checkbox" id="option6" name="check-options[]" value="other">Путешествия</br>
+        <input type="checkbox" id="option7" name="check-options[]" value="other">Другое</br>
+        <textarea name="feedback" id="feedback">Дополнительная информация: </textarea></br>
+        <button type="submit" id="button">Отправить</button></br>
+    </form>
+</body>
+</html>
