@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+    <form action="send_feedback.php" method="POST" class="form">
+        <h2>Форма обратной связи</h2>
+
+
+
+        <label class="label" for="lastname">Фамилия:</label>
+        <input class="input" type="text" id="lastname" name="lastname" required>
+
+        <label class="label" for="name">Имя:</label>
+        <input class="input" type="text" id="name" name="name" required>
+
+        <label class="label" for="patronymic">Отчество:</label>
+        <input class="input" type="text" id="patronymic" name="patronymic" required>
+
+        <label class="label" for="address">Адрес:</label>
+        <input class="input" type="text" id="address" name="address" required>
+
+        <label class="label" for="phone">Телефон:</label>
+        <input class="input" type="text" id="phone" name="phone" required>
+
+        <label class="label" for="mail">Электронная почта:</label>
+        <input class="input" type="email" id="mail" name="mail" required>
+
+        <label class="label" for="comment">Комментарий к заказу:</label>
+        <textarea  class="input" name="comment" id="comment"></textarea>
+
+        <label class="label" for="product">Выберите товар:</label>
+        <select class="input" id="product" name="product">
+            <option value="product1">Товар 1</option>
+            <option value="product2">Товар 2</option>
+            <option value="product3">Товар 3</option>
+        </select>
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
