@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Слайдер веб-страниц</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Слайдер веб-страниц</h1>
+        
+        <!-- Секция добавления нового URL -->
+        <div id="url-input-section">
+            <input type="text" id="url-input" placeholder="Введите URL сайта">
+            <button id="add-url-button" class="button">Добавить сайт</button>
+        </div>
+
+         <!-- Секция задания интервала -->
+         <div id="interval-input-section">
+            <input type="number" id="interval-input" placeholder="Интервал в секундах" min="1">
+            <button id="set-interval-button" class="button">Задать интервал</button>
+        </div>
+
+        <!-- Информация о текущей странице -->
+        <div id="info">Ожидание показа страниц...</div>
+        
+        <!-- Область показа страниц -->
+        <iframe id="webpage" src="" frameborder="0"></iframe>
+
+        <!-- Кнопки управления слайдером -->
+        <div id="slider-controls">
+            <button id="back-button" class="button">Предыдущий</button>
+            <button id="next-button" class="button">Следующий</button>
+        </div>
+
+    </div>
+
+    <!-- Подключение внешнего JS-файла -->
+    <script src="js/main.min.js"></script>
+</body>
+</html>
