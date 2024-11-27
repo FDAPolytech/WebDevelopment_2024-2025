@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обратная связь</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1>Форма обратной связи</h1>
-<form action="feedback.php" method="post">
+<form id="feedback-form" action="feedback.php" method="post">
     <!-- Имя -->
     <label for="first_name">Имя:</label>
     <input type="text" id="first_name" name="first_name" required><br><br>
@@ -42,5 +44,8 @@
 
     <button type="submit">Отправить</button>
 </form>
+
+<!-- Подключение JavaScript -->
+<script src="script.js"></script>
 </body>
 </html>
