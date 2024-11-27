@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  php:
+    build: ./
+    container_name: php-container
+    volumes:
+      - ./www:/var/www/html
+    ports:
+      - "80:80"
+      - "8080:80"
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: orders
+    volumes:
+      - ./db.sql:/docker-entrypoint-initdb.d/db.sql
+    expose:
+      - "3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin-container
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "8888:80"
+    depends_on:
+      - mysql
