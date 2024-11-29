@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Обратная связь</title>
+  </head>
+  <body>
+  
+  
+	<h4>Обратная связь</h4>
+    <form action="process.php" method="post">
+	<p>
+		<label for="name">Введите имя</label>
+		<input type="text" name="name" id="name">
+	</p>
+	<p>
+		<label for="surname">Введите фамилию</label>
+		<input type="text" name="surname" id="surname">
+	</p>
+	<p>
+		<label for="email">Введите электронную почту</label>
+		<input type="text" name="email" id="email">
+	</p>
+	
+	
+	<p>Оцените обслуживание
+		<label>
+			<input name="expirience_1" type="radio" value="плохо_обслуживание">
+			плохо
+		</label>
+		<label>
+			<input name="expirience_1" type="radio" value="нормально_обслуживание">
+			нормально
+		</label>
+		<label>
+			<input name="expirience_1" type="radio" value="отлично_обслуживание">
+			отлично
+		</label>
+	</p>
+	<p>Оцените общее впечатление
+		<label>
+			<input name="expirience" type="radio" value="плохо_впечатление">
+			плохо</label>
+		<label>
+			<input name="expirience" type="radio" value="нормально_впечатление">
+			нормально</label>
+		<label>
+			<input name="expirience" type="radio" value="отлично_впечатление">
+			отлично</label>
+	</p>
+	
+	
+	<p>Укажите, что особенно понравилось:</p>
+    <label>
+        <input type="checkbox" name="good[]" value="Обслуживание"> Обслуживание
+    </label>
+    <label>
+        <input type="checkbox" name="good[]" value="Расположение"> Расположение
+    </label>
+    <label>
+        <input type="checkbox" name="good[]" value="Ассортимент"> Ассортимент
+    </label>
+		<p>Укажите, что не понравилось:</p>
+    <label>
+        <input type="checkbox" name="bad[]" value="Цена"> Цена
+    </label>
+    <label>
+        <input type="checkbox" name="bad[]" value="Качество"> Качество
+    </label>
+    <label>
+        <input type="checkbox" name="bad[]" value="Ассортимент"> Ассортимент
+    </label>
+		<p>Укажите, что нужно изменить:</p>
+    <label>
+        <input type="checkbox" name="change[]" value="Цена"> Цена
+    </label>
+    <label>
+        <input type="checkbox" name="change[]" value="Качество"> Качество
+    </label>
+    <label>
+        <input type="checkbox" name="change[]" value="Ассортимент"> Ассортимент
+    </label>
+	<label>
+        <input type="checkbox" name="change[]" value="Ничего"> Ничего
+    </label><br><br>
+	<input type="submit" value="Отправить обратную связь">
+  </form>
+  </body>
+</html>
