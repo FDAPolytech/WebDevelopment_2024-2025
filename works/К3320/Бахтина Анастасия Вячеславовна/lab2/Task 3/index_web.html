@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index_web.css">
+    <title>Task №3 Website</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Введите в поле ссылку на сайт и укажите время показа страницы:</h1>
+        </div>
+    </header>
+    <main>
+        <form>
+            <input type="url" name="url" placeholder="Введите ссылку на сайт" required>
+            <input type="number" name="duration" placeholder="Введите время (в секундах)" required>
+            <input type="submit" value="Добавить">
+        </form>
+        <section class="url-list-section">
+            <h2>Сайты, которые вы вводили ранее:</h2>
+            <div id="sites"></div>
+        </section>
+        <section class="iframe-section">
+            <h2>Просмотр сайта:</h2>
+            <iframe id="frame" title="site"></iframe>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Бахтина Анастасия. К3320</p>
+    </footer>
+    <script src="script_web.js"></script>
+</body>
+</html>
+
