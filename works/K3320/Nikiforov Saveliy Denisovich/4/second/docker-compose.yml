@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - wordpress_network
+    expose:
+      - 3306
+
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress_site
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: user
+      WORDPRESS_DB_PASSWORD: password
+      WP_DEBUG: true
+      WP_DEBUG_LOG: true
+      WP_DEBUG_DISPLAY: true
+    ports:
+      - "8080:80"
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+    networks:
+      - wordpress_network
+    depends_on:
+      - db
+
+  phpmyadmin-second:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "8888:80"
+    depends_on:
+      - db
+    networks:
+      - wordpress_network
+
+volumes:
+  mysql-data:
+
+networks:
+  wordpress_network:
+    driver: bridge
