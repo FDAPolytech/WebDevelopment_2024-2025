@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        img {
+            max-width: 800px;
+            /* Устанавливаем максимальную ширину изображения */
+            height: auto;
+            border: 2px solid #ccc;
+        }
+
+        .color-change {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+        }
+
+        area {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Interactive Image Map</h1>
+    <p>Наведи курсор на области изображения, чтобы увидеть подсказки, или кликни для выполнения действий!</p>
+    <img src="image.jpg" usemap="#image-map" alt="Example Image">
+
+    <map name="image-map">
+        <area shape="rect" coords="10,10,100,100" href="https://example.com" target="_blank" alt="Перейти на сайт"
+            title="Перейти на сайт">
+        <area shape="circle" coords="200,200,50" onclick="changeColor()" alt="Изменить цвет"
+            title="Изменить цвет области">
+        <area shape="poly" coords="300,100,400,50,450,150,350,200" onclick="alert('Полигональная область!')"
+            alt="Сообщение" title="Показать сообщение">
+        <area shape="rect" coords="500,300,600,400" href="mailto:test@example.com" alt="Отправить Email"
+            title="Отправить Email">
+        <area shape="circle" coords="700,200,75" onclick="openNewPage()" alt="Открыть страницу"
+            title="Открыть новую страницу">
+    </map>
+
+    <div id="color-box" class="color-change"></div>
+
+    <script>
+        function changeColor() {
+            const box = document.getElementById('color-box');
+            box.style.backgroundColor = box.style.backgroundColor === 'yellow' ? 'blue' : 'yellow';
+        }
+
+        function openNewPage() {
+            window.open('https://github.com', '_blank');
+        }
+    </script>
+</body>
+
+</html>
