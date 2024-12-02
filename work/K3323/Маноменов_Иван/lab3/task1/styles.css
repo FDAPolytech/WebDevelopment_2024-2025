@@ -1,0 +1,35 @@
+/* Сброс стилей по умолчанию */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основной стиль для body */
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000; /* Светлый фон страницы */
+}
+
+/* Контейнер, чтобы все элементы были по центру */
+.container {
+    text-align: center;
+}
+
+/* Стиль для текста Hello World */
+.main-text {
+    font-weight: bold;
+    color: rgb(2, 0, 128);
+    font-size: 3rem; /* Размер шрифта для Hello World */
+    margin-bottom: 20px;
+}
+
+/* Стиль для текста Help me */
+.sub-text {
+    color: gray;
+    font-size: 1.5rem; /* Размер шрифта для Help me */
+}
