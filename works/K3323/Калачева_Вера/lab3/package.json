@@ -1,0 +1,12 @@
+{
+  "name": "feedback",
+  "version": "1.0.0",
+  "scripts": {},
+  "dependencies": {
+    "gulp": "^5.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp-connect-php": "^1.0.3"
+  }
+}
