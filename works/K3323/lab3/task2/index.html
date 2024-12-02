@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            margin: 0;
+            font-weight: normal;
+        }
+        button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button[type="submit"]:last-of-type {
+            background-color: #28A745;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <script>
+        function copyDataToGetForm() {
+            const feedbackForm = document.getElementById('feedbackForm');
+            const getForm = document.getElementById('getForm');
+
+            // Удаляем все скрытые поля, если они существуют
+            const hiddenInputs = getForm.querySelectorAll('input[type="hidden"]');
+            hiddenInputs.forEach(input => input.remove());
+
+            // Копируем данные из формы feedbackForm в getForm
+            Array.from(feedbackForm.elements).forEach(element => {
+                if (element.name && element.value) {
+                    // Проверяем, если это чекбокс, включаем только отмеченные
+                    if (element.type === 'checkbox' && !element.checked) {
+                        return;
+                    }
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = element.name;
+                    input.value = element.value;
+                    getForm.appendChild(input);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Форма обратной связи</h1>
+        <form id="feedbackForm" action="feedback.php" method="post">
+            <label for="first_name">Имя:</label>
+            <input type="text" id="first_name" name="first_name" required>
+
+            <label for="last_name">Фамилия:</label>
+            <input type="text" id="last_name" name="last_name" required>
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="feedback">Обратная связь:</label>
+            <textarea id="feedback" name="feedback" required></textarea>
+
+            <label>Выберите один из вариантов:</label>
+            <div class="form-group">
+                <input type="radio" id="option1" name="option" value="option1" required>
+                <label for="option1">Вариант 1</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="option2" name="option" value="option2" required>
+                <label for="option2">Вариант 2</label>
+            </div>
+
+            <label>Выберите подходящие варианты:</label>
+            <div class="form-group">
+                <input type="checkbox" id="checkbox1" name="checkbox[]" value="checkbox1">
+                <label for="checkbox1">Чекбокс 1</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="checkbox2" name="checkbox[]" value="checkbox2">
+                <label for="checkbox2">Чекбокс 2</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="checkbox3" name="checkbox[]" value="checkbox3">
+                <label for="checkbox3">Чекбокс 3</label>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" name="submit" value="post">Отправить POST</button>
+            </div>
+        </form>
+        <br>
+        <form id="getForm" action="feedback.php" method="get" onsubmit="copyDataToGetForm()">
+            <div class="button-container">
+                <button type="submit" name="submit" value="get">Отправить GET</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
