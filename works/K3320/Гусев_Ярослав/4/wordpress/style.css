@@ -1,0 +1,107 @@
+/* General Reset */
+body, h1, h2, p, label, input, textarea, select, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+/* Container for the Form */
+form {
+  background: #fff;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Headings */
+h1, h2 {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Form Labels */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="number"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+}
+
+/* Button */
+button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Products Section */
+#products div {
+  margin-bottom: 10px;
+}
+
+/* Product Labels */
+#products label {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+/* Input Fields for Products */
+#products input[type="number"] {
+  width: 100px;
+  display: inline-block;
+}
+
+/* Comment Section */
+textarea#comment {
+  height: 100px;
+}
+
+/* Form Spacing */
+form > h2 {
+  margin-top: 20px;
+}
+
+/* Add a Little Margin for All Elements */
+form label,
+form input,
+form textarea,
+form button {
+  margin-bottom: 10px;
+}
