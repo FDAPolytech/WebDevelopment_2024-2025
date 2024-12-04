@@ -1,0 +1,32 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "description": "My BIG project for lab2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seregasars/WebDevelopment_2024-2025.git"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sergei Sarychev",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-concat": "^2.6.1",
+    "browser-sync": "^2.27.7",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-notify": "^3.2.0"
+  },
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/seregasars/WebDevelopment_2024-2025/issues"
+  },
+  "homepage": "https://github.com/seregasars/WebDevelopment_2024-2025#readme"
+}

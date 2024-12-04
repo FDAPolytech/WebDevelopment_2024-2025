@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автоматический просмотр страниц</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <h1>Меню управления</h1>
+            <!-- Форма для добавления нового URL -->
+            <form id="urlForm">
+                <input type="text" id="urlInput" placeholder="Введите URL" required>
+                <button type="submit">Добавить URL</button>
+            </form>
+
+            <!-- Список добавленных URL -->
+            <h2>Добавленные URL:</h2>
+            <ul id="urlList"></ul>
+
+            <!-- Форма для изменения интервала -->
+            <h2>Интервал обновления:</h2>
+            <form id="intervalForm">
+                <input type="number" id="intervalInput" placeholder="Введите интервал (мс)" min="1000" required>
+                <button type="submit">Установить интервал</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div id="content">
+            <!-- Здесь будет отображаться страница через iframe -->
+            <iframe id="pageIframe" src="" frameborder="0" style="width: 100%; height: 80vh;"></iframe>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
