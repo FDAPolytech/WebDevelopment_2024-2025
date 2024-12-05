@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Обратная связь</title>
+</head>
+<body>
+    <h1>Форма обратной связи</h1>
+    <form action="process_form.php" method="post">
+        <label for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="feedback">Обратная связь:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+
+        <label>Как вы узнали о нас?</label><br>
+        <input type="radio" id="radio1" name="source" value="Социальные сети" required>
+        <label for="radio1">Социальные сети</label><br>
+        <input type="radio" id="radio2" name="source" value="Рекомендации">
+        <label for="radio2">Рекомендации</label><br><br>
+
+        <label>Выберите ваши интересы:</label><br>
+        <input type="checkbox" id="checkbox1" name="interests[]" value="Спорт">
+        <label for="checkbox1">Спорт</label><br>
+        <input type="checkbox" id="checkbox2" name="interests[]" value="Финансы">
+        <label for="checkbox2">Финансы</label><br>
+        <input type="checkbox" id="checkbox3" name="interests[]" value="Кино">
+        <label for="checkbox3">Кино</label><br><br>
+
+        <input type="submit" name="submit" value="Отправить (POST)">
+        <input type="submit" name="submit_get" value="Отправить (GET)" formaction="process_form.php" formmethod="get">
+    </form>
+</body>
+</html>
