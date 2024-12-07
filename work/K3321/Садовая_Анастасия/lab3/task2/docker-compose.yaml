@@ -1,0 +1,27 @@
+services:
+    nginx:
+        image: nginx:latest
+        container_name: nginx
+        volumes:
+            - ./public:/usr/share/nginx/html
+            - ./nginx.conf:/etc/nginx/nginx.conf:ro
+        ports:
+            - "80:80"
+        depends_on:
+            - php-fpm
+            
+        healthcheck:
+            test: ["CMD", "nginx", "-t"]
+            interval: 3s
+            retries: 3
+
+    php-fpm:
+        build: .
+        container_name: php-fpm
+        volumes:
+            - ./src:/var/www/html
+        
+        healthcheck:
+            test: ["CMD", "php", "-v"]
+            interval: 3s
+            retries: 3
