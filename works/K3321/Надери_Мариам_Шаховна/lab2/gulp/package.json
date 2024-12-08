@@ -1,0 +1,17 @@
+{
+  "name": "lab-2",
+  "version": "1.0.0",
+  "description": "Glue project",
+  "main": "index.js",
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "simpleTask": "gulp simpleTask",
+    "webS": "gulp webSlider"
+  },
+  "author": "Mariam",
+  "license": "ISC"
+}
