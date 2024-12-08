@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="css/styles_feedback.css">
+</head>
+<body>
+    <h2>Обратная связь</h2>
+    <form action="feedback.php" method="post">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label>Ваше мнение о нашем сайте:</label>
+        <textarea id="opinion" name="opinion" required></textarea>
+
+        <p>Как часто вы посещаете наш сайт?</p>
+        <div>
+            <input type="radio" id="daily" name="visit_frequency" value="daily">
+            <label for="daily">Ежедневно</label>
+
+            <input type="radio" id="weekly" name="visit_frequency" value="weekly">
+            <label for="weekly">Еженедельно</label>
+
+            <input type="radio" id="monthly" name="visit_frequency" value="monthly">
+            <label for="monthly">Ежемесячно</label>
+        </div>
+
+        <p>Какие из следующих пунктов наиболее соответствуют вашему опыту использования нашего сайта?</p>
+        <div>
+            <input type="checkbox" id="design" name="experience[]" value="design">
+            <label for="design">Отличный дизайн</label>
+
+            <input type="checkbox" id="happy" name="experience[]" value="happy">
+            <label for="happy">Поднимает настроение</label>
+
+            <input type="checkbox" id="aesthetic" name="experience[]" value="aesthetic">
+            <label for="aesthetic">Не нравится эстетика</label>
+        </div>
+
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
