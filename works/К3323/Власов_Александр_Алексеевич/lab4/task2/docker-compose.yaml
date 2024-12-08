@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  wordpress:
+    build:
+      context: .
+    container_name: wordpress
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - /srv/http/wordpress:/var/www/html
+
+  db:
+    image: mysql:5.7
+    container_name: wordpress_db
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  wordpress_data:
+  mysql_data:
