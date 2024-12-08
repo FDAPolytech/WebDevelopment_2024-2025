@@ -33,17 +33,14 @@ $email = $conn->real_escape_string($email);
 $product = $conn->real_escape_string($product);
 $comment = $conn->real_escape_string($comment);
 
-// SQL-запрос на вставку данных
 $sql = "INSERT INTO orders (last_name, first_name, middle_name, address, phone, email, product, comment)
         VALUES ('$last_name', '$first_name', '$middle_name', '$address', '$phone', '$email', '$product', '$comment')";
 
-// Выполнение запроса
 if ($conn->query($sql) === TRUE) {
     echo "Заказ успешно оформлен!";
 } else {
     echo "Ошибка: " . $conn->error;
 }
 
-// Закрытие подключения
 $conn->close();
 ?>
