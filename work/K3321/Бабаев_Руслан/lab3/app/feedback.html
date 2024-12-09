@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+</head>
+<body>
+    <h1>Форма обратной связи</h1>
+    <form action="feedback.php" method="POST">
+        <label for="first_name">Имя:</label><br>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="last_name">Фамилия:</label><br>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+
+        <label for="email">Электронная почта:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Ваше сообщение:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <p>Как вы узнали о нас?</p>
+        <input type="radio" id="internet" name="source" value="Интернет" required>
+        <label for="internet">Интернет</label><br>
+        <input type="radio" id="friends" name="source" value="Друзья">
+        <label for="friends">Друзья</label><br><br>
+
+        <p>Что вас интересует?</p>
+        <input type="checkbox" id="news" name="interests[]" value="Новости">
+        <label for="news">Новости</label><br>
+        <input type="checkbox" id="offers" name="interests[]" value="Спецпредложения">
+        <label for="offers">Спецпредложения</label><br>
+        <input type="checkbox" id="events" name="interests[]" value="Мероприятия">
+        <label for="events">Мероприятия</label><br><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
