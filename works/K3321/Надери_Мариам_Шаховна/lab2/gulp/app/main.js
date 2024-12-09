@@ -13,7 +13,7 @@ function updateUrls() {
     if (newUrl && !pages.includes(newUrl)) {
         pages.push(newUrl)
     } else {
-        alert('URL уже есть в списке')
+        alert('URL СѓР¶Рµ РµСЃС‚СЊ РІ СЃРїРёСЃРєРµ')
     }
     newURL.value = ''
 }
@@ -24,7 +24,7 @@ function updateInterval() {
         clearInterval(goInterval)
         goInterval = setInterval(run, interval)
     } else {
-        alert('Новый интервал не может быть меньше 1 сек')
+        alert('РРЅС‚РµСЂРІР°Р» РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РјРµРЅСЊС€Рµ 1 СЃРµРє')
     }
     newInterval.value = ''
 }
