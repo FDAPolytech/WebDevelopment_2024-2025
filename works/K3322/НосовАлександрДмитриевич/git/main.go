@@ -8,4 +8,5 @@ func main() {
 	fmt.Println("Hello, World!")
 	fmt.Println("First commit")
 	fmt.Println("Second commit")
+	fmt.Println("Third commit")
 }
