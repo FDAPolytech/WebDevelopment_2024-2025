@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Switcher</title>
+    <style>
+      iframe {
+        width: 100%;
+        height: 100vh;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe id="iframe" src=""></iframe>
+    <script>
+      const urls = [
+        "https://www.wikipedia.org/",
+        "https://react.dev/",
+        "https://example.com/",
+      ];
+      let currentIndex = 0;
+      const interval = 3000;
+
+      function showNextPage() {
+        const iframe = document.getElementById("iframe");
+        iframe.src = urls[currentIndex];
+        currentIndex = (currentIndex + 1) % urls.length;
+      }
+
+      setInterval(showNextPage, interval);
+      showNextPage();
+    </script>
+  </body>
+</html>
