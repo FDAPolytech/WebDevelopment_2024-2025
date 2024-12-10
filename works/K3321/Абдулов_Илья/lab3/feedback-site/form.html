@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Feedback Form</title>
+	<link href="global.css" rel="stylesheet">
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<h1>Форма Обратной Связи</h1>
+	<form class="subform" method="post" action="process_form.php">
+		<p>
+			<label for="name">Как вас зовут?</label>
+			<input type="text" name="name" id="name" style="text-align: right;" required>
+		</p>
+		<p>
+			<label for="email">Ваш email адрес?</label>
+			<input type="text" name="email" id="email" style="text-align: right;" required>
+		</p>
+		<p>Как прошло ваше обучение?<br>
+			<label>
+				<input name="skill" type="radio" value="novice" required>
+				Отлично, узнал(а) много нового</label><br>
+			<label>
+				<input name="skill" type="radio" value="intermediate" required>
+				Хорошо, было несколько полезных заданий</label><br>
+			<label>
+				<input name="skill" type="radio" value="advanced" required>
+				Плохо, не получилось пройти</label>
+		</p>
+		<div class="checkbox-btn-group">
+			<p>Что вам понравилось больше всего?<br>
+				<label>
+					<input type="checkbox" name="interests[]">
+					<span>Видеоуроки</span>
+				</label>
+				<label>
+					<input type="checkbox" name="interests[]">
+					<span>Домашние задания</span>
+				</label>
+				<label>
+					<input type="checkbox" name="interests[]">
+					<span>Фидбэк от ментора</span>
+				</label>
+				<label>
+					<input type="checkbox" name="interests[]">
+					<span>Другое</span>
+				</label>
+			</p>
+		</div>
+		<p>
+			<label for="refer">Откуда вы узнали о нас?</label>
+			<select name="refer" id="refer">
+				<option value="null"></option>
+				<option value="1">Друзья</option>
+				<option value="2">Интернет</option>
+				<option value="3">Реклама</option>
+				<option value="4">Другое</option>
+			</select>
+		</p>
+		<p>
+			<label for="comments">Дополнительные комментарии</label><br>
+			<textarea name="comments" cols="35" rows="4" id="comments"></textarea>
+		</p>
+		<p>
+			<input type="submit" value="Отправить">
+		</p>
+	</form>
+</body>
+
+</html>
