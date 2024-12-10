@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <form action="formHandler.php" method="post">
+        Имя:
+        <input type="text" name="firstname">
+        <br><br>
+        Фамилия:
+        <input type="text" name="lastname">
+        <br><br>
+        Электронная почта:
+        <input type="email" name="email">
+        <br><br>
+        Комментарий:
+        <br>
+        <textarea name="comment"></textarea>
+        <br><br>
+        Выберите дату мероприятия:
+        <br>
+        <input type="radio" name="date" value="10.11.24">10.11.24
+        <br>
+        <input type="radio" name="date" value="17.11.24">17.11.24
+        <br><br>
+        Как узнали о мероприятии:
+        <br>
+        <input type="checkbox" name="sources[]" value="Реклама в интернете">Реклама в интернете<br>
+        <input type="checkbox" name="sources[]" value="Рассказали знакомые">Рассказали знакомые<br>
+        <input type="checkbox" name="sources[]" value="Реклама на улице">Реклама на улице<br>
+        
+        <input type="submit" value="Отправить">
+    </form>
+  </body>
+</html>
