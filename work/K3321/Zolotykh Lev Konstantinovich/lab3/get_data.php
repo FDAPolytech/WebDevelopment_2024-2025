@@ -1,14 +1,11 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET['id'])) {
-    // Получаем ID из GET-запроса
     $id = htmlspecialchars($_GET['id']);
     $filePath = __DIR__ . "/data/{$id}.json";
 
     if (file_exists($filePath)) {
-        // Читаем данные из файла
         $data = json_decode(file_get_contents($filePath), true);
 
-        // Выводим данные
         echo "<!DOCTYPE html>";
         echo "<html lang='ru'>";
         echo "<head><meta charset='UTF-8'><title>Полученные данные</title></head>";

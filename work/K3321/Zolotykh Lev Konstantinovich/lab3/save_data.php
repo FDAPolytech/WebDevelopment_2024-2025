@@ -1,6 +1,5 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Получаем данные из формы
     $firstName = htmlspecialchars($_POST['first_name'] ?? '');
     $lastName = htmlspecialchars($_POST['last_name'] ?? '');
     $email = htmlspecialchars($_POST['email'] ?? '');
@@ -8,10 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $option = htmlspecialchars($_POST['option'] ?? '');
     $checkboxes = $_POST['checkbox'] ?? [];
 
-    // Генерируем уникальный ID
     $id = uniqid();
 
-    // Формируем данные для записи
     $data = [
         "id" => $id,
         "first_name" => $firstName,
@@ -23,11 +20,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         "timestamp" => date("Y-m-d H:i:s")
     ];
 
-    // Сохраняем данные в файл
-    $filePath = __DIR__ . "/data/{$id}.json";
+    $directory = __DIR__ . "/data";
+    if (!is_dir($directory)) {
+        mkdir($directory, 0777, true);
+    }
+
+    $filePath = $directory . "/{$id}.json";
     file_put_contents($filePath, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
-    // Выводим страницу с ID и кнопкой получения данных
     echo "<!DOCTYPE html>";
     echo "<html lang='ru'>";
     echo "<head><meta charset='UTF-8'><title>Результат</title></head>";
