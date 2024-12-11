@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Форма обратной связи</h1>
+    <!-- Добавляем возможность выбора метода отправки -->
+    <form id="feedbackForm" action="feedback_handler.php" method="GET">
+        <h2>Основные данные</h2>
+        <label for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" required>
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="feedback">Ваше сообщение:</label>
+        <textarea id="feedback" name="feedback" rows="5" cols="30" required></textarea>
+
+        <h2>Капибара или бобёр:</h2>
+        <label for="capy_choise">
+        <input type="radio" id="capy_choise" name="capy_beaver" value="capy" required>
+        Капибара</label>
+
+        <label for="beaver_choice">
+        <input type="radio" id="beaver_choice" name="capy_beaver" value="beaver">
+        Бобёр</label>
+
+        <h2>Ваши интересы:</h2>
+        <label for="interest_1">
+        <input type="checkbox" id="interest_1" name="interests[]" value="sports">
+        Спорт</label>
+        <label for="interest_2">
+        <input type="checkbox" id="interest_2" name="interests[]" value="music">
+        Музыка</label>
+        <label for="interest_3">
+        <input type="checkbox" id="interest_3" name="interests[]" value="coding">
+        Программирование</label>
+
+        <h2>Выберите метод отправки:</h2>
+        <label for="method_get">
+        <input type="radio" id="method_get" name="send_method" value="GET" checked>
+        GET</label>
+        <label for="method_post">
+        <input type="radio" id="method_post" name="send_method" value="POST">
+        POST</label>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script>
+        // Скрипт для изменения метода отправки формы
+        const form = document.getElementById('feedbackForm');
+        const sendMethodRadios = document.querySelectorAll('input[name="send_method"]');
+
+        sendMethodRadios.forEach((radio) => {
+            radio.addEventListener('change', (event) => {
+                form.method = event.target.value;
+            });
+        });
+    </script>
+</body>
+</html>
