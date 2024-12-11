@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+</head>
+<body>
+    <h1>Place Your Order</h1>
+    <form action="process_order.php" method="post">
+        <fieldset>
+            <legend><strong>Personal Information</strong></legend>
+            <label for="surname">Surname:</label><br>
+            <input type="text" id="surname" name="surname" required><br><br>
+
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="patronymic">Patronymic:</label><br>
+            <input type="text" id="patronymic" name="patronymic"><br><br>
+
+            <label for="address">Delivery Address:</label><br>
+            <textarea id="address" name="address" rows="3" required></textarea><br><br>
+
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend><strong>Product Selection</strong></legend>
+            <label for="product">Choose a product:</label><br>
+            <select id="product" name="product" required>
+                <option value="Product 1">Product 1</option>
+                <option value="Product 2">Product 2</option>
+                <option value="Product 3">Product 3</option>
+            </select><br><br>
+
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" placeholder="Leave your comments..."></textarea>
+        </fieldset>
+        <hr>
+        <button type="submit">Submit Order</button>
+    </form>
+</body>
+</html>
