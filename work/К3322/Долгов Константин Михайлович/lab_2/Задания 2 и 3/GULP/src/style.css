@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 80vh;
+    border: 1px solid #ccc;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.url-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.url-list li {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
