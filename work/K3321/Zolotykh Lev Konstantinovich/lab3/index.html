@@ -1,0 +1,107 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="Form.css" />
+    <script>
+      function copyDataToGetForm() {
+        const feedbackForm = document.getElementById("feedbackForm");
+        const getForm = document.getElementById("getForm");
+
+        // Очистка скрытых полей в форме GET
+        const hiddenInputs = getForm.querySelectorAll('input[type="hidden"]');
+        hiddenInputs.forEach((input) => input.remove());
+
+        // Копируем данные в форму GET
+        Array.from(feedbackForm.elements).forEach((element) => {
+          if (element.name && element.value) {
+            if (element.type === "checkbox" && !element.checked) return;
+            const input = document.createElement("input");
+            input.type = "hidden";
+            input.name = element.name;
+            input.value = element.value;
+            getForm.appendChild(input);
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Обратная связь</h1>
+      <form id="feedbackForm" action="process.php" method="post">
+        <label for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" required />
+
+        <label for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" required />
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="feedback">Сообщение:</label>
+        <textarea id="feedback" name="feedback" required></textarea>
+
+        <fieldset>
+          <legend>Выберите вариант:</legend>
+          <input
+            type="radio"
+            id="option1"
+            name="option"
+            value="option1"
+            required
+          />
+          <label for="option1">Вариант 1</label>
+
+          <input type="radio" id="option2" name="option" value="option2" />
+          <label for="option2">Вариант 2</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Чекбоксы:</legend>
+          <input
+            type="checkbox"
+            id="checkbox1"
+            name="checkbox[]"
+            value="option1"
+          />
+          <label for="checkbox1">Чекбокс 1</label>
+
+          <input
+            type="checkbox"
+            id="checkbox2"
+            name="checkbox[]"
+            value="option2"
+          />
+          <label for="checkbox2">Чекбокс 2</label>
+
+          <input
+            type="checkbox"
+            id="checkbox3"
+            name="checkbox[]"
+            value="option3"
+          />
+          <label for="checkbox3">Чекбокс 3</label>
+        </fieldset>
+
+        <div class="button-container">
+          <button type="submit">Отправить POST</button>
+        </div>
+      </form>
+
+      <form
+        id="getForm"
+        action="process.php"
+        method="get"
+        onsubmit="copyDataToGetForm()"
+      >
+        <div class="button-container">
+          <button type="submit">Отправить GET</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
