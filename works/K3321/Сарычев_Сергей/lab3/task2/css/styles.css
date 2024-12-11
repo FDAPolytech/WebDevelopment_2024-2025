@@ -1,0 +1,78 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Светлый фон страницы */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Цвет текста */
+}
+
+/* Контейнер формы */
+form {
+    width: 500px; /* Ширина формы */
+    margin: 50px auto; /* Центрируем форму */
+    padding: 30px; /* Внутренние отступы */
+    background-color: #ffffff; /* Белый фон */
+    border: 1px solid #ddd; /* Тонкая рамка */
+    border-radius: 10px; /* Сглаженные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+/* Заголовок формы */
+h1 {
+    text-align: center; /* Центрируем заголовок */
+    font-size: 24px; /* Размер шрифта */
+    color: #007BFF; /* Яркий синий цвет */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Поля ввода */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Поля растягиваются на всю ширину */
+    margin-bottom: 15px; /* Отступ между элементами */
+    padding: 10px; /* Внутренние отступы */
+    font-size: 16px; /* Размер текста */
+    border: 1px solid #ccc; /* Тонкая рамка */
+    border-radius: 5px; /* Сглаженные углы */
+    box-sizing: border-box; /* Учитываем padding */
+}
+
+/* Радиокнопки и чекбоксы */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px; /* Отступ справа от кнопки */
+}
+
+/* Подписи к элементам */
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block; /* Каждая подпись на отдельной строке */
+}
+
+/* Кнопка отправки */
+button {
+    width: 100%; /* Кнопка занимает всю ширину формы */
+    padding: 10px;
+    background-color: #007BFF; /* Яркий синий фон */
+    color: #ffffff; /* Белый текст */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Сглаженные углы */
+    font-size: 18px; /* Размер текста */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s ease; /* Анимация */
+}
+
+button:hover {
+    background-color: #0056b3; /* Цвет при наведении */
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #666;
+}
