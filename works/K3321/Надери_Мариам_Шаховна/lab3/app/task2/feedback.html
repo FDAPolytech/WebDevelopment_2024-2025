@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab3 task2 Naderi Mariam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+    <h1>Feedback form</h1>
+    <form action="main.php" method="POST">
+        <label for="last_name">Your last name</label><br>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+
+        <label for="first_name">Your first name</label><br>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="age">Your age</label><br>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label>Do you like a chocolate?</label><br>
+        <input type="radio" id="yes_radio" name="radio" value="Yes" required>
+        <label for="yes_radio">Yes</label><br>
+        <input type="radio" id="no_radio" name="radio" value="No">
+        <label for="no_radio">No</label><br><br>
+
+        <label>What kind of chocolate do you prefer:</label><br>
+        <input type="checkbox" id="dark" name="type_choc[]" value="Dark">
+        <label for="dark">Dark</label><br>
+        <input type="checkbox" id="milk" name="type_choc[]" value="Milk">
+        <label for="milk">Milk</label><br>
+        <input type="checkbox" id="white" name="type_choc[]" value="White">
+        <label for="white">White</label><br><br>
+
+        <label for="fav_choc">Write your favorite chocolate</label><br>
+        <textarea id="fav_choc" name="fav_choc" rows="4" cols="50" required></textarea><br><br>
+
+        <button id="submit">Submit Post</button>
+        <button id="get_method" formaction="main.php" formmethod="GET">Submit Get</button>
+
+    </form>
+    </header>
+</body>
+</html>
