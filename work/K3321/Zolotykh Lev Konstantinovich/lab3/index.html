@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма с POST и GET</title>
+    <link rel="stylesheet" href="Form.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Отправка данных через POST</h1>
+      <form id="postForm" action="save_data.php" method="post" target="_blank">
+        <label for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" required />
+
+        <label for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" required />
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="feedback">Сообщение:</label>
+        <textarea id="feedback" name="feedback" required></textarea>
+
+        <fieldset>
+          <legend>Выберите вариант:</legend>
+          <input
+            type="radio"
+            id="option1"
+            name="option"
+            value="option1"
+            required
+          />
+          <label for="option1">Вариант 1</label>
+
+          <input type="radio" id="option2" name="option" value="option2" />
+          <label for="option2">Вариант 2</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Выберите чекбоксы:</legend>
+          <input
+            type="checkbox"
+            id="checkbox1"
+            name="checkbox[]"
+            value="option1"
+          />
+          <label for="checkbox1">Чекбокс 1</label>
+
+          <input
+            type="checkbox"
+            id="checkbox2"
+            name="checkbox[]"
+            value="option2"
+          />
+          <label for="checkbox2">Чекбокс 2</label>
+
+          <input
+            type="checkbox"
+            id="checkbox3"
+            name="checkbox[]"
+            value="option3"
+          />
+          <label for="checkbox3">Чекбокс 3</label>
+        </fieldset>
+
+        <button type="submit">Отправить данные</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+    "id": "6759afa51e3fd",
+    "first_name": "Лев",
+    "last_name": "Золотых",
+    "email": "levzolotykh@mail.ru",
+    "feedback": "decwe",
+    "option": "option1",
+    "checkboxes": [
+        "option2",
+        "option3"
+    ],
+    "timestamp": "2024-12-11 15:28:37"
+}
