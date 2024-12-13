@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="style.css"> <!-- Подключаем внешний CSS файл -->
+</head>
+<body>
+    <div class="container">
+        <h2>Форма заказа</h2>
+        <form action="submit.php" method="POST">
+            <label for="surname">Фамилия:</label>
+            <input type="text" id="surname" name="surname" required><br>
+
+            <label for="firstname">Имя:</label>
+            <input type="text" id="firstname" name="firstname" required><br>
+
+            <label for="patronymic">Отчество:</label>
+            <input type="text" id="patronymic" name="patronymic"><br>
+
+            <label for="address">Адрес для доставки:</label>
+            <input type="text" id="address" name="address" required><br>
+
+            <label for="phone">Телефон:</label>
+            <input type="text" id="phone" name="phone" required><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="product">Выберите товар:</label>
+            <select id="product" name="product_id" required>
+                <option value="1">Что-то номер 1</option>
+                <option value="2">Что-то номер 2</option>
+                <option value="3">Не заказывайте это, пожалуйста</option>
+            </select><br>
+
+            <label for="comment">Комментарий:</label>
+            <textarea id="comment" name="comment"></textarea><br>
+
+            <button type="submit">Оформить заказ</button>
+        </form>
+    </div>
+</body>
+</html>

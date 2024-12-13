@@ -1,0 +1,80 @@
+/* Общие стили для всего документа */
+body {
+    font-family: Arial, sans-serif; /* Шрифт для страницы */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Цвет фона страницы */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Начнем с верхней части экрана */
+    min-height: 100vh; /* Убираем жесткое ограничение по высоте */
+    padding-top: 20px; /* Добавляем отступ сверху */
+}
+
+/* Контейнер, который будет содержать форму */
+.container {
+    background-color: #fff; /* Белый фон формы */
+    padding: 20px;
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    width: 100%;
+    max-width: 500px; /* Максимальная ширина формы */
+    text-align: center;
+    margin-bottom: 20px; /* Добавляем отступ снизу */
+}
+
+/* Заголовок */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Стили для меток */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Стили для полей ввода */
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопки */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049; /* Тёмно-зеленый при наведении */
+}
+
+/* Стили для текстовых областей */
+textarea {
+    resize: vertical; /* Пользователь может изменить размер по вертикали */
+    height: 100px; /* Начальная высота */
+}
+
+/* Поддержка адаптивности */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        width: 90%; /* Форма будет занимать 90% ширины экрана на мобильных устройствах */
+    }
+}
