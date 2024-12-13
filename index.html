@@ -1,0 +1,23 @@
+<form action="process.php" method="post">
+    <label>Name: <input type="text" name="first_name" required></label><br>
+    <label>Surname: <input type="text" name="last_name" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>
+        Feedback:<br>
+        <textarea name="feedback" rows="5" required></textarea>
+    </label><br>
+    <label>
+        Gender:
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female" required> Female
+    </label><br>
+    <label>
+        Interests:
+        <input type="checkbox" name="interests[]" value="sports"> Sport
+        <input type="checkbox" name="interests[]" value="music"> Music
+        <input type="checkbox" name="interests[]" value="reading"> Reading
+    </label><br>
+    <button type="submit">Send</button>
+</form>
+
+
