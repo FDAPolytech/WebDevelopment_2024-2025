@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form action="feedback.php" method="post">
+        <fieldset>
+            <legend><strong>Personal Information</strong></legend>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+            <label for="surname">Surname:</label><br>
+            <input type="text" id="surname" name="surname" placeholder="Enter your surname" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend><strong>Your Feedback</strong></legend>
+
+            <label for="feedback">Share your thoughts:</label><br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Write your feedback here..." required></textarea>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend><strong>Additional Information</strong></legend>
+            <p>How did you find us?</p>
+            <label><input type="radio" name="source" value="Internet" required> Internet</label><br>
+            <label><input type="radio" name="source" value="Friend"> Friend</label><br><br>
+            <p>What services are you interested in?</p>
+            <label><input type="checkbox" name="services[]" value="Web Development"> Web Development</label><br>
+            <label><input type="checkbox" name="services[]" value="SEO"> SEO</label><br>
+            <label><input type="checkbox" name="services[]" value="Content Writing"> Content Writing</label>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend><strong>Submit</strong></legend>
+            <p>Select the method of submission:</p>
+            <button type="submit" formaction="feedback.php" formmethod="post">Submit via POST</button>
+            <button type="submit" formaction="feedback.php" formmethod="get">Submit via GET</button>
+        </fieldset>
+    </form>
+</body>
+</html>
