@@ -1,0 +1,20 @@
+{
+  "name": "lab-3",
+  "version": "1.0.0",
+  "description": "Gulp project for trird lab",
+  "main": "index.js",
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "notP": "gulp notParallel",
+    "P": "gulp Parallel",
+    "webS": "gulp webSlider",
+    "autoweb": "gulp auto-update"
+  },
+  "author": "Mariam",
+  "license": "ISC"
+}
+
