@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Показ ссылок</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Прокрутка страниц</title>
+</head>
+
+<body>
+    <h1>Прокрутка страниц</h1>
+    <div class="container">
+        <div class="navigate-container">
+            <div class="form-group">
+                <label for="page-url">Ссылка:</label>
+                <input type="text" id="page-url" placeholder="Введите ссылку на страницу">
+            </div>
+    
+            <div class="form-group">
+                <label for="interval">Интервал показа (в секундах):</label>
+                <input type="number" id="interval" min="1" placeholder="Введите интервал показа в секундах">
+            </div>
+    
+            <div id="button-group">
+                <button class="button-in-line" id="addUrl">Добавить ссылку</button>
+    
+                <button class="button-in-line" id="startShow">Запустить показ</button>
+            </div>
+    
+            <div id="pages" class="pages"></div>
+        </div>
+
+        <div class="page-container">
+            <div class="page">
+                <iframe id="iframe" width="100%" height="550px"></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+body {
+    font-family: sans-serif;
+    background-color: #e2e2ff; 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #f8f7ff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 26px;
+    text-align: center;
+    color: #9381ff; 
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #9381ff; 
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #666; 
+}
+
+button {
+    padding: 10px;
+    font-weight: bold;
+    background-color: #9381ff; 
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#button-group
+{
+    width:100%;
+    text-align: center;
+}
+
+.pages {
+    margin-top: 20px;
+    color: #666; 
+}
+
+.page-container {
+    width: 78%;
+    display: inline-block;
+    align-items: top;
+    padding: 5px;
+}
+
+.navigate-container {
+    width: 20%;
+    display: inline-block;
+    align-items: top;
+    vertical-align: top;
+}
+
+.page {
+    width: 100%;
+}
+
+iframe {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    color: #666; 
+}
+
+.pages p {
+    display:block;
+    padding: 5px;
+    color: #666;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 14px;
+    marker: none;
+ }
