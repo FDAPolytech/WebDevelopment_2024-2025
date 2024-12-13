@@ -3,7 +3,7 @@
 $host = 'localhost';
 $dbname = 'shop_db';
 $username = 'root';
-$password = ''; // Укажите ваш пароль, если есть
+$password = ''; 
 
 $conn = new mysqli($host, $username, $password, $dbname);
 
