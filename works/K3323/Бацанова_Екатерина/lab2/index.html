@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клиент для показа веб-страниц</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Клиент для показа веб-страниц</h1>
+        
+        <div class="form-container">
+            <input type="text" id="url-input" placeholder="Введите URL" />
+            <button id="add-url-btn">Добавить</button>
+        </div>
+
+        <div class="interval-container">
+            <label for="interval-input">Интервал (в секундах):</label>
+            <input type="number" id="interval-input" placeholder="Интервал" min="1" />
+        </div>
+
+        <h2>Список добавленных страниц:</h2>
+        <div class="url-list-container">
+            <ul id="url-list"></ul>
+        </div>
+
+        <div class="webpage-container">
+            <iframe id="webpage-viewer" src="" frameborder="0"></iframe>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
