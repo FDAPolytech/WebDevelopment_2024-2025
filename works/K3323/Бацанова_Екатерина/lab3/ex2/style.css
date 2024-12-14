@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    width: 60%;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* Группы радиокнопок и чекбоксов */
+.radio-group, .checkbox-group {
+    margin: 10px 0;
+}
+
+/* Каждый радио и чекбокс в своем контейнере */
+.radio-group div, .checkbox-group div {
+    margin-bottom: 10px;
+}
+
+/* Метки рядом с кнопками и чекбоксами */
+.radio-group label, .checkbox-group label {
+    display: inline;
+    vertical-align: middle;
+    margin-left: 10px; /* Отступ между кнопкой/чекбоксом и текстом */
+}
+
+/* Кнопка отправки */
+.submit-btn {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #4cae4c;
+}
+
+.submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 184, 92, 0.7);
+}
