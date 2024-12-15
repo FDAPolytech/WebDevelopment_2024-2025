@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>Обратная связь фффф</h1>
+    <form action="feedback.php" method="post">
+        <fieldset>
+            <legend><strong>Персональная информация</strong></legend>
+            <label for="name">Имя:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+            <label for="surname">Фамилия:</label><br>
+            <input type="text" id="surname" name="surname" placeholder="Enter your surname" required><br><br>
+            <label for="email">Почта:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend><strong>Обратная связь</strong></legend>
+
+            <label for="feedback">Подились мыслями</label><br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Write your feedback here..." required></textarea>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend><strong>Доп иняормаиця</strong></legend>
+            <p>Как вы нашли нас?</p>
+            <label><input type="radio" name="source" value="Internet" required> Интернет</label><br>
+            <label><input type="radio" name="source" value="Friend"> Друзья</label><br><br>
+            <p>Что вас интересует?</p>
+            <label><input type="checkbox" name="services[]" value="Web Development"> Web-разработка</label><br>
+            <label><input type="checkbox" name="services[]" value="SEO"> SEO</label><br>
+            <label><input type="checkbox" name="services[]" value="Content Writing"> Написания контента</label>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend><strong>Отправить</strong></legend>
+            <p>Выбрать способ:</p>
+            <button type="submit" formaction="feedback.php" formmethod="post">POST</button>
+            <button type="submit" formaction="feedback.php" formmethod="get">GET</button>
+        </fieldset>
+    </form>
+</body>
+</html>
