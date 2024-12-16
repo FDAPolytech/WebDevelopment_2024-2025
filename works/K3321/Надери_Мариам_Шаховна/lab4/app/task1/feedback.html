@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab4 task1 Naderi Mariam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="main.php" method="POST">
+        <h1>Оформление заказа</h1>
+        
+        <label for="last_name">Фамилия</label>
+        <input type="text" id="last_name" name="last_name" required>
+        
+        <label for="first_name">Имя</label>
+        <input type="text" id="first_name" name="first_name" required>
+        
+        <label for="dad_name">Отчество</label>
+        <input type="text" id="dad_name" name="dad_name">
+        
+        <label for="addr">Адрес доставки</label>
+        <input type="text" id="addr" name="addr" required>
+        
+        <label for="phone">Номер телефона</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="mail">Электронная почта</label>
+        <input type="email" id="mail" name="mail" required>
+        
+        <label for="product">Выберите товар</label>
+        <select id="product" name="product" required>
+            <option value="1">Кружка</option>
+            <option value="2">Носки</option>
+            <option value="3">Шарф</option>
+            <option value="4">Подушка</option>
+        </select>
+        
+        <label for="comm">Оставить комментарий</label>
+        <textarea id="comm" name="comm" rows="4" cols="50" required></textarea>
+        
+        <button id="submit">Заказать</button>
+    </form>
+</body>
+</html>
