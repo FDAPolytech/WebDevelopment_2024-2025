@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автоматическое переключение страниц</title>
+    <script>
+        let pages = [];
+        let interval = 5000;
+        let currentPageIndex = 0;
+        let timer;
+
+        // Функция для добавления адреса в список
+        function addPage() {
+            const pageInput = document.getElementById("page").value.trim();
+
+            if (!pageInput) {
+                alert("Введите корректный URL!");
+                return;
+            }
+
+            pages.push(pageInput);
+            document.getElementById("page").value = "";
+            updatePageList();
+        }
+
+        // Функция для обновления списка адресов на экране
+        function updatePageList() {
+            const pageList = document.getElementById("pageList");
+            pageList.innerHTML = "";
+
+            pages.forEach((page, index) => {
+                const listItem = document.createElement("li");
+                listItem.textContent = page;
+                const removeButton = document.createElement("button");
+                removeButton.textContent = "Удалить";
+                removeButton.onclick = () => removePage(index); // Удаление конкретного элемента
+                listItem.appendChild(removeButton);
+                pageList.appendChild(listItem);
+            });
+        }
+
+        // Функция для удаления страницы из списка
+        function removePage(index) {
+            pages.splice(index, 1);
+            updatePageList();
+        }
+
+        // Функция для запуска переключения страниц
+        function startSwitching() {
+            const intervalInput = parseInt(document.getElementById("interval").value) * 1000;
+
+            if (pages.length === 0) {
+                alert("Добавьте хотя бы один URL!");
+                return;
+            }
+
+            if (isNaN(intervalInput) || intervalInput <= 0) {
+                alert("Введите корректный интервал!");
+                return;
+            }
+
+            interval = intervalInput;
+
+            // Останавливаем предыдущий таймер, если он есть
+            if (timer) {
+                clearInterval(timer);
+            }
+
+            // Начинаем переключение
+            currentPageIndex = 0;
+            timer = setInterval(showNextPage, interval);
+            showNextPage(); // Сразу показываем первую страницу
+        }
+
+        // Функция для показа следующей страницы в iframe
+        function showNextPage() {
+            if (currentPageIndex < pages.length) {
+                const iframe = document.getElementById("viewer");
+                iframe.src = pages[currentPageIndex];
+                currentPageIndex++;
+            } else {
+                currentPageIndex = 0; // Возвращаемся к началу
+                const iframe = document.getElementById("viewer");
+                iframe.src = pages[currentPageIndex];
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Автоматическое переключение страниц</h1>
+    <p>Введите адрес страницы по одному, добавьте в список и задайте интервал переключения (в секундах):</p>
+
+    <form onsubmit="event.preventDefault(); addPage();">
+        <label for="page">Адрес страницы:</label><br>
+        <input type="text" id="page" placeholder="https://example.com"><br><br>
+        <button type="submit">Добавить</button>
+    </form>
+
+    <h2>Список добавленных страниц:</h2>
+    <ul id="pageList">
+        <!-- Здесь будут отображаться добавленные страницы -->
+    </ul>
+
+    <form onsubmit="event.preventDefault(); startSwitching();">
+        <label for="interval">Интервал (в секундах):</label><br>
+        <input type="number" id="interval" placeholder="5"><br><br>
+        <button type="submit">Начать переключение</button>
+    </form>
+
+    <h2>Просмотр страниц:</h2>
+    <!-- iframe для отображения страниц -->
+<iframe id="viewer" style="width: 100%; height: 500px; border: 1px solid #ccc;"></iframe>
+</body>
+</html>
