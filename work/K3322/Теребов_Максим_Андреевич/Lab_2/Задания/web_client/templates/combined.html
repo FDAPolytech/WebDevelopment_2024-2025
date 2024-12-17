@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Циклический просмотр страниц</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; display: flex; flex-direction: row; height: 100vh; }
+        .controls { width: 300px; padding: 20px; background: #f4f4f4; overflow-y: auto; }
+        iframe { flex: 1; border: none; }
+        input, button { margin-top: 10px; display: block; width: 100%; padding: 5px; }
+        li { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <!-- Панель управления -->
+    <div class="controls">
+        <h2>Настройки</h2>
+
+        <!-- Добавить ссылку -->
+        <h3>Добавить URL</h3>
+        <input type="text" id="new_url" placeholder="Введите URL">
+        <button onclick="addUrl()">Добавить</button>
+
+        <!-- Список ссылок -->
+        <h3>Список URL</h3>
+        <ul id="url_list">
+            {% for url in urls %}
+            <li>{{ url }} <button onclick="deleteUrl('{{ url }}')">Удалить</button></li>
+            {% endfor %}
+        </ul>
+
+        <!-- Интервал смены -->
+        <h3>Интервал (секунды)</h3>
+        <input type="number" id="interval" value="{{ interval }}" min="1">
+        <button onclick="setIntervalTime()">Установить интервал</button>
+    </div>
+
+    <!-- Область для отображения страниц -->
+    <iframe id="page_frame" src="{{ current_url }}"></iframe>
+
+    <script>
+        // Функция для обновления iframe
+        function updateFrame() {
+            fetch("/get_current_url")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("page_frame").src = data.current_url;
+                });
+        }
+        setInterval(updateFrame, 3000); // Обновляем каждые 3 секунды
+
+        // Добавление URL
+        function addUrl() {
+            const url = document.getElementById("new_url").value;
+            fetch("/add_url", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ url: url })
+            })
+            .then(response => response.json())
+            .then(data => updateUrlList(data.urls));
+        }
+
+        // Удаление URL
+        function deleteUrl(url) {
+            fetch("/delete_url", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ url: url })
+            })
+            .then(response => response.json())
+            .then(data => updateUrlList(data.urls));
+        }
+
+        // Обновление интервала
+        function setIntervalTime() {
+            const interval = document.getElementById("interval").value;
+            fetch("/set_interval", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ interval: parseInt(interval) })
+            });
+        }
+
+        // Обновление списка URL
+        function updateUrlList(urls) {
+            const urlList = document.getElementById("url_list");
+            urlList.innerHTML = "";
+            urls.forEach(url => {
+                urlList.innerHTML += `<li>${url} <button onclick="deleteUrl('${url}')">Удалить</button></li>`;
+            });
+        }
+    </script>
+</body>
+</html>
