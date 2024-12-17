@@ -1,36 +1,78 @@
-import java.awt.Desktop;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.Scanner;
+import org.junit.jupiter.api.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+class SaleorE2ETests {
 
-        System.out.println("Введите адреса web-страниц, разделяя их запятой: ");
-        String urlsInput = scanner.nextLine();
-        String[] urls = urlsInput.split(",\\s*");
+    private static WebDriver driver;
+    private static WebDriverWait wait;
 
-        System.out.println("Введите интервал показа в секундах: ");
-        int interval = scanner.nextInt() * 1000;
+    @BeforeAll
+    static void setup() {
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        driver = new ChromeDriver();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
 
-        for (String url : urls) {
-            try {
-                if (Desktop.isDesktopSupported()) {
-                    Desktop desktop = Desktop.getDesktop();
-                    desktop.browse(new URI(url));
-                } else {
-                    System.out.println("Desktop API не поддерживается на этом устройстве.");
-                }
-
-                Thread.sleep(interval);
-            } catch (IOException | URISyntaxException | InterruptedException e) {
-                System.out.println("Произошла ошибка при открытии URL: " + url);
-                e.printStackTrace();
-            }
+    @AfterAll
+    static void teardown() {
+        if (driver != null) {
+            driver.quit();
         }
+    }
 
-        scanner.close();
+    @Test
+    @DisplayName("User Login Test")
+    void testUserLogin() {
+        driver.get("https://demo.saleor.io/");
+
+        // Navigate to login page
+        WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/account/login']")));
+        loginButton.click();
+
+        // Enter login credentials
+        WebElement emailField = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("id_email")));
+        emailField.sendKeys("user@example.com");
+
+        WebElement passwordField = driver.findElement(By.id("id_password"));
+        passwordField.sendKeys("password123");
+
+        WebElement submitButton = driver.findElement(By.cssSelector("button[type='submit']"));
+        submitButton.click();
+
+        // Assert user is logged in
+        WebElement accountMenu = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("a[href='/account']")));
+        Assertions.assertTrue(accountMenu.isDisplayed(), "User should be logged in.");
+    }
+
+    @Test
+    @DisplayName("Add Product to Cart and Checkout")
+    void testAddToCartAndCheckout() {
+        driver.get("https://demo.saleor.io/");
+
+        // Select a product from homepage
+        WebElement product = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href*='/product']")));
+        product.click();
+
+        // Add product to cart
+        WebElement addToCartButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[data-testid='add-to-cart-button']")));
+        addToCartButton.click();
+
+        // Go to cart
+        WebElement cartButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/cart']")));
+        cartButton.click();
+
+        // Proceed to checkout
+        WebElement checkoutButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/checkout']")));
+        checkoutButton.click();
+
+        // Assert checkout page is displayed
+        WebElement checkoutHeader = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("h1")));
+        Assertions.assertEquals("Checkout", checkoutHeader.getText(), "Should navigate to checkout page.");
     }
 }
