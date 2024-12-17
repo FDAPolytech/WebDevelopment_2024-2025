@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма заказа</title>
+</head>
+<body>
+    <h2>Форма заказа товара</h2>
+    <form action="process_order.php" method="post">
+        <label>Фамилия: <input type="text" name="last_name" required></label><br>
+        <label>Имя: <input type="text" name="first_name" required></label><br>
+        <label>Отчество: <input type="text" name="middle_name"></label><br>
+        <label>Адрес: <input type="text" name="address" required></label><br>
+        <label>Телефон: <input type="tel" name="phone" required></label><br>
+        <label>Email: <input type="email" name="email" required></label><br>
+        <label>Выберите товар:
+            <select name="product">
+                <option value="Этика">Этика</option>
+                <option value="О душе">О душе</option>
+                <option value="Риторика">Риторика</option>
+            </select>
+        </label><br>
+        <label>Комментарий:<br><textarea name="comment" rows="4"></textarea></label><br>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
