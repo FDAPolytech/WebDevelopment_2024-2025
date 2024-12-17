@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Форма обратной связи</title>
+</head>
+<body>
+    <h1>Форма обратной связи</h1>
+    <form action="process.php" method="post">
+        <label for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="feedback">Сообщение:</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea><br>
+
+        <p>Тема сообщения:</p>
+        <input type="radio" id="question" name="topic" value="Вопрос" required>
+        <label for="question">Вопрос</label>
+        <input type="radio" id="suggestion" name="topic" value="Предложение">
+        <label for="suggestion">Предложение</label>
+
+        <p>Ваши предпочтения:</p>
+        <input type="checkbox" id="news" name="preferences[]" value="Новости">
+        <label for="news">Новости</label>
+        <input type="checkbox" id="updates" name="preferences[]" value="Обновления">
+        <label for="updates">Обновления</label>
+        <input type="checkbox" id="promotions" name="preferences[]" value="Акции">
+        <label for="promotions">Акции</label><br>
+		<p>
+        <button type="submit">Отправить</button>
+		</p>
+    </form>
+</body>
+</html>
