@@ -16,3 +16,4 @@ const parallelTask = gulp.parallel(funcOne, funcTwo);
 
 exports.seriesTask = seriesTask;
 exports.parallelTask = parallelTask;
+
