@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+</head>
+<body>
+    <h1>Форма обратной связи</h1>
+    <form action="script.php" method="POST">
+        <p>
+            <label>Имя:<br>
+                <input type="text" name="firstName" required>
+            </label>
+        </p>
+        <p>
+            <label>Фамилия:<br>
+                <input type="text" name="lastName" required>
+            </label>
+        </p>
+        <p>
+            <label>Электронная почта:<br>
+                <input type="email" name="email" required>
+            </label>
+        </p>
+        <p>
+            <label>Обратная связь:<br>
+                <textarea name="feedback" rows="4" required></textarea>
+            </label>
+        </p>
+        <p>Выберите, по какой теме необходимо связаться:</p>
+        <p>
+            <label>
+                <input type="radio" name="typeOfParty" value="День рождения" required> День рождения
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="typeOfParty" value="Свадьба"> Свадьба
+            </label>
+			<br>
+			<label>
+                <input type="radio" name="typeOfParty" value="Другой"> Другой праздник
+            </label>
+        </p>
+        <p>Какие услуги вас интересуют?</p>
+        <p>
+            <label>
+                <input type="checkbox" name="services[]" value="Консультация"> Консультация
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="services[]" value="Техническая поддержка"> Техническая поддержка
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="services[]" value="Другое"> Другое
+            </label>
+        </p>
+        <p>
+            <button type="submit">Отправить</button>
+        </p>
+    </form>
+</body>
+</html>
