@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "gulp-cli": "^3.0.0",
+    "npm": "^10.9.1"
+  },
+  "name": "proj_lab_2",
+  "version": "1.0.0",
+  "description": "My first gulp project",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mariia",
+  "license": "ISC"
+}
