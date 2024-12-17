@@ -1,0 +1,42 @@
+services:
+  wordpress:
+    image: wordpress:latest
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress_user
+      WORDPRESS_DB_PASSWORD: wordpress_password
+      WORDPRESS_DB_NAME: wordpress_db
+    volumes:
+      - wordpress_data:/var/www/html
+    networks:
+      - wp_network
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: wordpress_db
+      MYSQL_USER: wordpress_user
+      MYSQL_PASSWORD: wordpress_password
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - wp_network
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - wordpress
+    networks:
+      - wp_network
+
+volumes:
+  wordpress_data:
+  db_data:
+
+networks:
+  wp_network:
