@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f7fa;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h1 {
+    font-size: 28px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 22px;
+    color: #333;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#url-input {
+    width: 70%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#add-url-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-url-btn:hover {
+    background-color: #45a049;
+}
+
+/* Стили для интервала */
+.interval-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#interval-input {
+    width: 120px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.interval-container label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.url-list-container {
+    max-width: 100%;
+    overflow-y: auto;
+    margin-top: 20px;
+    height: 200px;
+}
+
+#url-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#url-list li {
+    display: flex;
+    align-items: left;
+    margin-bottom: 15px;
+    padding: 12px;
+    background-color: #f4f7fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    width: 100%;
+    white-space: normal;
+}
+
+#url-list li span {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    max-width: 80%;
+}
+
+#url-list li button {
+    padding: 6px 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+#url-list li button:hover {
+    background-color: #c0392b;
+}
+
+.webpage-container {
+    margin-top: 30px;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
