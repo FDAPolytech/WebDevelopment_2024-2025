@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Information</title>
+<link href="global.css" rel="stylesheet">
+<style>
+
+</style>
+</head>
+<body>
+	<!-- mysql --socket /opt/lampp/var/mysql/mysql.sock -u root -p -->
+<h1>Simple Form</h1>
+<form class="form"  method="POST" action="send_feedback.php">
+	<p>
+		<label for="name">What is your name?</label>
+		<input type="text" name="name" id="name" required>
+	</p>
+	<p>
+		<label for="lastname">What is your surname?</label>
+		<input type="text" name="lastname" id="lastname" required>
+	</p>
+	<p>
+		<label for="email">What is your email address?</label>
+		<input type="text" name="email" id="email" required>
+	</p>
+	<p>
+		<label for="address">What is your address?</label>
+		<input type="text" name="adress" id="adress" required>
+	</p>
+	
+	<p>
+		<label for="product">What do you want? </label>
+		<select name="product" id="product">
+			<option value="null">Select</option>
+			<option value="Product 1">Product 1</option>
+			<option value="Product 2">Product 2</option>
+			<option value="Product 3">Product 3</option>
+			<option value="Product 4">Product 4</option>
+		</select>
+	</p>
+	<p>
+		<label for="comment">Additional comments </label>
+		<textarea name="comment" cols="35" rows="4" id="comment"></textarea>
+	</p>
+	<p>
+		<!-- <script>
+			alert("here")
+		</script> -->
+		<button type='submit'>Send form</button>
+	</p>
+</form>
+</body>
+</html>
