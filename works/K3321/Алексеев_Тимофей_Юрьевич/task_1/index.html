@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма доставки</title>
+</head>
+<body>
+    <h2>Форма обратной связи</h2>
+    <form action="send_info.php" method="post">
+        <p>Имя:</p> 
+        <input type="text" name="first-name">
+        <p>Фамилия:</p>
+        <input type="text" name="second-name">
+        <p>Отчество:</p>
+        <input type="text" name="third-name">
+        <p>Физический адрес доставки товара:</p>
+        <input type="text" name="address">
+        <p>Телефон:</p> 
+        <input type="text" name="phone">
+        <p>Email:</p> 
+        <input type="email" name="email">
+        <p>Выберите товар:</p> 
+        <select id="product" name="product">
+            <option value="Product 1">Утюг</option>
+            <option value="Product 2">Миксер</option>
+            <option value="Product 3">Блендер</option>
+            <option value="Product 4">Хлебопечка</option>
+        </select>
+
+        <p>Комментарий к заказу:</p>
+        <textarea name="feedback" cols="20" row="20"></textarea><br>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
