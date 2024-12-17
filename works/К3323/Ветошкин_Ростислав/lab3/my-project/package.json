@@ -1,0 +1,21 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "main": "file.js",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "sass": "^1.81.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^6.0.0"
+  }
+}
