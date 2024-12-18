@@ -1,0 +1,41 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: 'Helvetica Neue', sans-serif;
+
+@mixin button-styles($bg-color) {
+  background-color: $bg-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+body {
+  font-family: $font-stack;
+  background-color: #f4f4f4;
+  color: #333;
+
+  h1 {
+    color: $primary-color;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  p {
+    padding: 0 20px;
+    line-height: 1.6;
+  }
+
+  .btn-primary {
+    @include button-styles($primary-color);
+  }
+
+  .btn-secondary {
+    @include button-styles($secondary-color);
+  }
+}

@@ -1,0 +1,36 @@
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+body h1 {
+  color: #3498db;
+  text-align: center;
+  margin-top: 50px;
+}
+body p {
+  padding: 0 20px;
+  line-height: 1.6;
+}
+body .btn-primary {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body .btn-primary:hover {
+  opacity: 0.8;
+}
+body .btn-secondary {
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body .btn-secondary:hover {
+  opacity: 0.8;
+}
