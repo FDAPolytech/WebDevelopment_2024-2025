@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оформить заказ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="process_form.php" method="post">
+        <label for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+        <label for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+        <label for="middle_name">Отчество:</label>
+        <input type="text" id="middle_name" name="middle_name"><br><br>
+        <label for="address">Адрес:</label>
+        <textarea id="address" name="address" rows="3" cols="30"></textarea><br><br>
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="product">Выберите товары:</label>
+        <div id="productContainer" required>
+        </div>
+        <label for="comment">Комментарий:</label>
+        <textarea id="comment" name="comment" rows="3" cols="30"></textarea><br><br>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script src="product_loader.js"></script>
+</body>
+</html>

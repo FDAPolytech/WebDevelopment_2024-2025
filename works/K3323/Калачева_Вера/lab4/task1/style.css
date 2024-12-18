@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('roses.jpg');
+    margin: 0;
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #6d2222;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255,0,0,0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: #390000;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    background-color: rgb(50, 20, 20);;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #541c1c;
+}
+
+.error {
+    color: white;
+    margin-top: 5px;
+}
+
+/* Стили для чекбоксов */
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #390000;;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "\2714";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    color: white;
+    font-size: 14px;
+}
+
+#productContainer {
+    margin-bottom: 15px;
+}
+
+#productContainer label {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+#productContainer input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+#productContainer span {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 5px;
+}
