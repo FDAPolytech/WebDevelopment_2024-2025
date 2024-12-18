@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #5cb85c;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+<h1>Форма обратной связи</h1>
+<form action="process_feedback.php" method="post">
+    <label for="first_name">Имя:</label>
+    <input type="text" id="first_name" name="first_name" required>
+
+    <label for="last_name">Фамилия:</label>
+    <input type="text" id="last_name" name="last_name" required>
+
+    <label for="email">Электронная почта:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="feedback">Обратная связь:</label>
+    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+    <label>Как вы узнали о нас?</label>
+    <input type="radio" id="radio1" name="source" value="Интернет" required>
+    <label for="radio1">Интернет</label>
+    <input type="radio" id="radio2" name="source" value="Рекомендации">
+    <label for="radio2">Рекомендации</label>
+
+    <label>Выберите ваши интересы:</label>
+    <input type="checkbox" id="checkbox1" name="interests[]" value="Новости">
+    <label for="checkbox1">Новости</label>
+    <input type="checkbox" id="checkbox2" name="interests[]" value="События">
+    <label for="checkbox2">События</label>
+    <input type="checkbox" id="checkbox3" name="interests[]" value="Акции">
+    <label for="checkbox3">Акции</label>
+
+    <input type="submit" name="submit" value="Отправить (POST)">
+    <input type="submit" name="submit_get" value="Отправить (GET)" formaction="process_feedback.php" formmethod="get">
+</form>
+</body>
+</html>
