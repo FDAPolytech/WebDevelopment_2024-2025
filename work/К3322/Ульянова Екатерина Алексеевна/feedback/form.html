@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+	<script>
+        function validateForm() {
+            const checkboxes = document.querySelectorAll('input[name="topics[]"]');
+            let checked = false;
+            checkboxes.forEach((checkbox) => {
+                if (checkbox.checked) {
+                    checked = true;
+                }
+            });
+            if (!checked) {
+                alert("Пожалуйста, выберите хотя бы одно наименование из предложенного набора.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Заполните форму для отправки отзыва по выбранному товару: </h1>
+    <form action="process.php" method="post" onsubmit="return validateForm()">
+        Имя: <input type="text" id="first_name" name="first_name" required><br /><br />
+        Фамилия: <input type="text" id="last_name" name="last_name" required><br /><br />
+        Электронная почта: <input type="email" id="email" name="email" required><br /><br />
+        Обратная связь: <br /> <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea> <br /><br />
+
+        <p>Выберите категорию товара:</p>
+        <p><input type="radio" id="cat1" name="category" value="Бумажный" required>Бумажный</p>
+        <p><input type="radio" id="cat2" name="category" value="Электронный">Электронный</p><br /><br />
+
+        <p>Выберите наименования из набора:</p>
+        <p><input type="checkbox" id="topic1" name="topics[]" value="Собачье сердце">Собачье сердце</p>
+        <p><input type="checkbox" id="topic2" name="topics[]" value="Мёртвые души">Мёртвые души</p>
+        <p><input type="checkbox" id="topic3" name="topics[]" value="Портрет Дориана Грея">Портрет Дориана Грея</p> <br /><br />
+
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
