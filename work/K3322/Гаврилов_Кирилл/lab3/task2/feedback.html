@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+</head>
+<body>
+    <h1>Ваша обратная связь</h1>
+    <form action="feedback.php" method="post">
+        <p>Ваше имя:</p>
+        <input type="text" name="name">
+        <p>Ваша фамилия:</p>
+        <input type="text" name="surname">
+        <p>Ваш email:</p>
+        <input type="email" name="email">
+        <p>Ваш комментарий:</p>
+        <textarea name="feedback" cols="50" rows="20" placeholder="Введите вашу обратную связь..."></textarea>
+
+        <p>Ваша оценка товара:</p>
+        <p> <input type="radio" name="score" value="0"> 0 </p>
+        <p> <input type="radio" name="score" value="1"> 1 </p>
+        <p> <input type="radio" name="score" value="2"> 2 </p>
+        <p> <input type="radio" name="score" value="3"> 3 </p>
+
+        <p>Где вы видели информацию о нашей компании?</p>
+        <input type="checkbox" name="service[]" value="www">Интернет<br>
+        <input type="checkbox" name="service[]" value="city">Реклама в городе<br>
+        <input type="checkbox" name="service[]" value="friend">Посоветовали друзья<br>
+        <br>
+        <input type="submit" value="Отправить отзыв">
+    </form>
+</body>
