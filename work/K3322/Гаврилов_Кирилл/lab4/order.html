@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ</title>
+</head>
+<body>
+    <h2>Ваш заказ: </h2>
+    <form action="order.php" method="post">
+      <p>Имя: </p>
+      <input type="text" name="firstname">
+      <p>Фамилия: </p>
+      <input type="text" name="surname">
+      <p>Отчество: </p>
+      <input type="text" name="fathername">
+      <p>Адрес: </p>
+      <input type="text" name="address">
+      <p>Номер телефона: </p>
+      <input type="text" name="phone">
+      <p>Почта: </p>
+      <input type="email" name="email">
+      <p>Ваш товар: </p>
+        <select id="product" name="product">
+            <option value="">Выберите продукт</option>
+            <option value="product1">Телефон</option>
+            <option value="product2">Часы</option>
+            <option value="product3">Планшет</option>
+            <option value="product4">Молоко</option>
+        </select>
+      <p>Дополнительный заказ: </p>
+      <textarea name="add" cols="20" rows="50" placeholder="Введите дополнительные товары..."></textarea></br>
+      <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
