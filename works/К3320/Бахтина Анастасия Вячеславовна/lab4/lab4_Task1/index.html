@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form action="feedback.php" method="POST" class="form">
+        <h2>Форма для заказа товаров</h2>
+
+        <label class="label" for="lastname">Фамилия:</label>
+        <input class="input" type="text" id="lastname" name="lastname" required>
+
+        <label class="label" for="firstname">Имя:</label>
+        <input class="input" type="text" id="firstname" name="firstname" required>
+
+        <label class="label" for="middlename">Отчество:</label>
+        <input class="input" type="text" id="middlename" name="middlename" required>
+
+        <label class="label" for="address">Адрес для доставки товара:</label>
+        <input class="input" type="text" id="address" name="address" required>
+
+        <label class="label" for="phone">Контактный телефон:</label>
+        <input class="input" type="text" id="phone" name="phone" required>
+
+        <label class="label" for="email">Электронная почта:</label>
+        <input class="input" type="email" id="email" name="email" required>
+
+        <label class="label" for="comments">Введите комментарий к заказу ниже:</label>
+        <textarea class="input" name="comments" id="comments"></textarea>
+
+        <label class="label" for="product">Выберите товар из данного списка:</label>
+        <select class="input" id="product" name="product">
+            <option value="product1">Товар 1</option>
+            <option value="product2">Товар 2</option>
+            <option value="product3">Товар 3</option>
+        </select>
+        <button type="submit">Оформить заказ</button>
+    </form>
+</body>
+</html>
