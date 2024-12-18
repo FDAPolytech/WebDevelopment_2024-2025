@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+</head>
+<body>
+    <h1>Форма обратной связи</h1>
+    <form action="submit.php" method="POST">
+        <!-- Имя -->
+        <label>Имя:</label>
+        <input type="text" name="name" required><br><br>
+
+        <!-- Фамилия -->
+        <label>Фамилия:</label>
+        <input type="text" name="surname" required><br><br>
+
+        <!-- Электронная почта -->
+        <label>Электронная почта:</label>
+        <input type="email" name="email" required><br><br>
+
+        <!-- Отзыв -->
+        <label>Ваш отзыв:</label><br>
+        <textarea name="feedback" required></textarea><br><br>
+
+        <!-- Радиокнопки -->
+        <p>Как вы узнали о нас?</p>
+        <label><input type="radio" name="source" value="Интернет" required> Интернет</label><br>
+        <label><input type="radio" name="source" value="Друзья"> Друзья</label><br><br>
+
+        <!-- Чекбоксы -->
+        <p>Какие услуги вас интересуют?</p>
+        <label><input type="checkbox" name="services[]" value="Консультация"> Консультация</label><br>
+        <label><input type="checkbox" name="services[]" value="Обучение"> Обучение</label><br>
+        <label><input type="checkbox" name="services[]" value="Поддержка"> Поддержка</label><br><br>
+
+        <!-- Кнопка отправки -->
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
