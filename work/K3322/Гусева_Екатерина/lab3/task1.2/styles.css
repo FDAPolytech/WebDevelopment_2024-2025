@@ -1,0 +1,15 @@
+body {
+    background-color: #ccf8a2;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: rgb(78, 4, 105);
+    font-size: 3em;
+    text-shadow: 2px 2px 4px #ccc;
+}
