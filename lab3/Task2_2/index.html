@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form action="feedback.php" method="POST" class="form">
+        <h2>Форма обратной связи для пользователя</h2>
+        <label class="label" for="name">Имя:</label>
+        <input class="input" type="text" id="name" name="name" required>
+
+        <label class="label" for="surname">Фамилия:</label>
+        <input class="input" type="text" id="surname" name="surname" required>
+
+        <label class="label" for="email">Электронная почта:</label>
+        <input class="input" type="email" id="email" name="email" required>
+
+        <label class="label" for="message">Введите ваше сообщение ниже:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <div class="c-row">
+        <fieldset class="c-column">
+            <legend>Оцените качество нашей работы:</legend>
+            <label class="label">
+                <input type="radio" name="source" value="отлично" required> Отлично
+            </label>
+            <label class="label">
+                <input type="radio" name="source" value="хорошо"> Хорошо
+            </label>
+            <label class="label">
+                <input type="radio" name="source" value="плохо"> Плохо
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Как с вами связаться для ответа нашей компании?</legend>
+            <label class="label">
+                <input type="checkbox" name="contacts[]" value="telegram"> Telegram
+            </label>
+            <label class="label">
+                <input type="checkbox" name="contacts[]" value="vk"> VK
+            </label>
+            <label class="label">
+                <input type="checkbox" name="contacts[]" value="whatsapp"> WhatsApp
+            </label>
+        </fieldset>
+    </div>
+        <button type="submit">Отправить форму</button>
+    </form>
+</body>
+</html>
