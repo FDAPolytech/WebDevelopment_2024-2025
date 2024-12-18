@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Обратная связь</title>
+	</head>
+	<body>
+		<h1>Форма обратной связи</h1>
+		<form action="process_feedback.php" method="post">
+		
+			<label for="first_name">Имя:</label></br>
+			<input type="text" id="first_name" name="first_name" required></br></br>
+			
+			<label for="last_name">Фамилия:</label></br>
+			<input type="text" id="last_name" name="last_name" required></br></br>
+			
+			<label for="email">Электронная почта:</label></br>
+			<input type="email" id="email" name="email" required></br></br>
+			
+			<label for="first_name">Ваше сообщение:</label></br>
+			<textarea id="feedback" name="feedback" rows="4" required></textarea></br></br>
+			
+			<label>Выберете тему:</label></br>
+			<input type="radio" id="topic1" name="topic" value="Жалоба" required>
+			<label for="topic1">Жалоба</label></br>
+			<input type="radio" id="topic2" name="topic" value="Предложение" required>
+			<label for="topic2">Предложение</label></br>
+			
+			<label>Как вы о нас узнали?</label></br>
+			<input type="checkbox" id="source1" name="source[]" value="Социальные сети">
+			<label for="source1">Социальные сети</label></br>
+			<input type="checkbox" id="source2" name="source[]" value="Рекомендации">
+			<label for="source2">Рекомендации</label></br>
+			<input type="checkbox" id="source3" name="source[]" value="Поиск в интернете">
+			<label for="source3">Поиск в интернете</label></br>
+			<input type="checkbox" id="source4" name="source[]" value="Реклама">
+			<label for="source4">Реклама</label></br>
+			<input type="checkbox" id="source5" name="source[]" value="Другое">
+			<label for="source5">Другое</label></br>
+			
+			<input type="submit" value="Отправить">
+		</form>
+	</body>
+</html>
