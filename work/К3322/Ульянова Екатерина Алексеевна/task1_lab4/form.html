@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ товара</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Форма заказа товара</h1>
+    <form action="process.php" method="POST">
+        <label for="surname">Фамилия:</label><br />
+        <input type="text" id="surname" name="surname" required><br /><br />
+
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br /><br />
+
+        <label for="patronimic">Отчество:</label><br />
+        <input type="text" id="patronimic" name="patronimic"><br /><br />
+
+        <label for="address">Адрес доставки:</label><br />
+        <textarea id="address" name="address" rows="3" required></textarea><br /><br />
+
+        <label for="phone">Телефон:</label><br />
+        <input type="tel" id="phone" name="phone" required><br /><br />
+
+        <label for="email">Электронная почта:</label><br />
+        <input type="email" id="email" name="email" required><br /><br />
+
+        <label for="product">Выберите товар:</label><br />
+        <select id="product" name="product" required>
+            <option value="product1">Собачье сердце</option>
+            <option value="product2">Мёртвые души</option>
+            <option value="product3">Портрет Дориана Грея</option>
+        </select><br /><br />
+
+        <label for="comments">Комментарий к заказу:</label><br />
+        <textarea id="comments" name="comments" rows="3"></textarea><br /><br />
+
+        <button type="submit">Оформить заказ</button>
+    </form>
+</body>
+</html>
