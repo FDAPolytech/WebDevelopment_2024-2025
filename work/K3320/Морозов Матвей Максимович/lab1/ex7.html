@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+</head>
+
+<body>
+<p>Основные элементы форм:</p>
+<form action="ex7.html" method="POST" enctype="multipart/form-data">
+  Простое текстовое поле: <input type="text" name="txtField"/><br/>
+  Поле длиной максимум 5 символов:<input type="text" name="txtField" maxlength="5"/><br/>
+  Многострочное текстовое поле:<br/>
+  <textarea name="txtArea">Это многострочное текстовое поле</textarea><br/>
+  Поле для ввода пароля:<input type="password" name="psw"/><br/>
+  Скрытое поле: <input type="hidden" name="ndnTxt"/><br/>
+  <input type="submit" name="submit" value="Отправить!"/>
+</form>
+
+<p>Новая форма:</p>
+<form>
+  Работа с цветом:<input type="color" name="color"/><br/>
+  Работа с датой: <input type="date" name="date"/><br/>
+  Проверка е-mail:<input type="email" name="email"/><br/>
+  Проверка чисел:<input type="number" name="number"/><br/>
+  Работа с днем недели:<input type="week" name="week"/><br/>
+  Проверка URL:<input type="url" name="url"/><br/>
+
+  <input type="submit" name="submit" value="Отправить!">
+</form>
+
+<p>Еще одна форма:</p>
+<form>
+  Введите данные:<input type="text" name="txt"/><br/>
+  <input type="reset" name="reset" value="Очистить поле!"/><br/>
+  <input type="button" name="MyButton" value="Просто кнопка"/><br/>
+  <button name="MyButton">
+    <img src="Screenshot_1.png" title="Это тоже кнопка">
+  </button><br/>
+  <input type="submit" name="submit" value="Отправить!"><br/>
+</form>
+
+<p>Форма с одним выбором значения (переключатели формы):</p>
+<form>
+  <p><input type="radio" name="MyRadio" value="First">First variant</p>
+  <p><input type="radio" name="MyRadio" value="Second">Second variant</p>
+  <p><input type="radio" name="MyRadio" value="Third">Third variant</p>
+  <p><input type="submit" name="submit"></p>
+</form>
+
+<p>Форма с выбором нескольких значений (флашки формы):</p>
+<form>
+  <p><input type="checkbox" name="MyChckBx" value="First">first variant</p>
+  <p><input type="checkbox" name="MyChckBx" value="Second">second variant</p>
+  <p><input type="checkbox" name="MyChckBx" value="Third">third variant</p>
+  <input type="submit" name="submit">
+</form>
+
+<p>Форма с полем со списком:</p>
+<form>
+  <select name="cars" size="1">
+
+    <optgroup label="Ford">
+      <option value="F">Focus</option>
+      <option value="M">Mondeo</option>
+      <option value="K">Kuga</option>
+    </optgroup>
+
+    <optgroup label="Volkswagen">
+      <option value="G">Golf</option>
+      <option value="B">Beetle</option>
+      <option value="P">Passat</option>
+    </optgroup>
+
+    <optgroup label="Chevrolet">
+      <option value="Cr">Cruze</option>
+      <option value="Cam">Camaro</option>
+      <option value="Cor">Corvette</option>
+    </optgroup>
+
+  </select>
+  <input type="submit" name="submit"/>
+</form>
+
+<p>Форма с полем для загрузки файлов</p>
+<form>
+  <input type="file" name="files" multiple><br/>
+  <input type="submit" name="submit">
+</form>
+
+</body>
+</html>
