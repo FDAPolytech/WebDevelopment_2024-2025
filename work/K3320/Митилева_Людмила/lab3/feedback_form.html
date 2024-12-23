@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи о музыке</title>
+</head>
+<body>
+    <h1>Обратная связь о музыке</h1>
+    <form action="process_feedback.php" method="POST">
+        <!-- Имя -->
+        <label for="firstName">Имя:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <!-- Фамилия -->
+        <label for="lastName">Фамилия:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <!-- Электронная почта -->
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Оценка музыки (радиокнопки) -->
+        <p>Как вы оцениваете музыкальный контент на сайте?</p>
+        <label><input type="radio" name="rating" value="Отлично" required> Отлично</label><br>
+        <label><input type="radio" name="rating" value="Хорошо"> Хорошо</label><br>
+        <label><input type="radio" name="rating" value="Удовлетворительно"> Удовлетворительно</label><br>
+
+        <!-- Жанры музыки (чекбоксы) -->
+        <p>Какие жанры музыки вам нравятся? (можно выбрать несколько)</p>
+        <label><input type="checkbox" name="genres[]" value="Рок"> Рок</label><br>
+        <label><input type="checkbox" name="genres[]" value="Поп"> Поп</label><br>
+        <label><input type="checkbox" name="genres[]" value="Джаз"> Джаз</label><br>
+        <label><input type="checkbox" name="genres[]" value="Классика"> Классика</label><br>
+        <label><input type="checkbox" name="genres[]" value="Хип-хоп"> Хип-хоп</label><br>
+
+        <!-- Обратная связь -->
+        <label for="feedback">Ваши пожелания или комментарии:</label><br>
+        <textarea id="feedback" name="feedback" rows="5" cols="40" required></textarea><br><br>
+
+        <!-- Кнопка отправки -->
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
