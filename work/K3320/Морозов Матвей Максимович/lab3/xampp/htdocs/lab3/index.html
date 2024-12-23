@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+</head>
+<body>
+
+<h1>Форма обратной связи</h1>
+
+<form action="process_form.php" method="POST">
+    <label for="first_name">Имя:</label>
+    <input type="text" id="first_name" name="first_name" required><br><br>
+    
+    <label for="last_name">Фамилия:</label>
+    <input type="text" id="last_name" name="last_name" required><br><br>
+    
+    <label for="email">Электронная почта:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="feedback">Обратная связь:</label><br>
+    <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+    
+    <label>Тип запроса:</label><br>
+    <input type="radio" id="question" name="query_type" value="Вопрос" required>
+    <label for="question">Вопрос</label><br>
+    <input type="radio" id="suggestion" name="query_type" value="Предложение" required>
+    <label for="suggestion">Предложение</label><br><br>
+    
+    <label>Подписки:</label><br>
+    <input type="checkbox" id="newsletter" name="newsletter">
+    <label for="newsletter">Подписка на новости</label><br>
+    <input type="checkbox" id="updates" name="updates">
+    <label for="updates">Получать обновления</label><br>
+    <input type="checkbox" id="offers" name="offers">
+    <label for="offers">Получать предложения</label><br><br>
+
+    <input type="submit" value="Отправить">
+</form>
+
+</body>
+</html>
