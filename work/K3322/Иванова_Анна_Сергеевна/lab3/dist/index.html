@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gulp task page</h1>
+    </header>
+    <main>
+        <section>
+            <h1></h1>
+            <p>При изменении файлов страница</p>
+            <button id="button1">button 1</button>
+            <button id="button2">button 2</button>
+          
+            <script>
+              const button1 = document.getElementById('button1');
+              const button2 = document.getElementById('button2');
+          
+              button1.addEventListener('click', () => {
+                alert('Вы нажали на кнопку 1!');
+              });
+          
+              button2.addEventListener('click', () => {
+                alert('Вы нажали на кнопку 2!');
+              });
+            </script>
+
+            
+        </section>
+
+    </main>
+    <script> src="all.js" </script>
+</body>
+</html>
