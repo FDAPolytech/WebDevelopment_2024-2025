@@ -1,0 +1,43 @@
+body {
+    text-align: center;   
+   }
+   
+   button {
+       border-radius: 20px;
+       border: 5px;
+       background-color: rgb(214, 212, 110);
+       height: 50px;
+       width: 100px;
+       margin: 8px;
+       position: relative;
+       font: 1.2rem "Fira Sans", sans-serif;
+   }
+
+   .arrow-btn {
+    height: 500px;
+    width: 20px;
+    top: -230px
+   }
+
+   .play-btn {
+    top: -240px;
+   }
+   
+   button:hover {
+       box-shadow:
+    0px 1px 1px rgba(255,255,255,0.8) inset,
+    1px 1px 5px rgba(0,0,0,0.4);
+   }
+   
+   button:active {
+       top:1px;
+       background:#de7238;
+       box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
+       border-color: #000000;
+   }
+   
+   input {
+       margin-top: 5px;
+       position: relative;
+       top: -120px;
+   }
