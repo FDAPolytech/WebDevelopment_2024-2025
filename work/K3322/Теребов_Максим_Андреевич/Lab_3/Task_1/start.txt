@@ -1,0 +1,32 @@
+powershell от админа
+
+install node.js
+>>
+# installs fnm (Fast Node Manager)
+winget install Schniz.fnm
+# configure fnm environment
+fnm env --use-on-cd | Out-String | Invoke-Expression
+# download and install Node.js
+fnm use --install-if-missing 22
+# verifies the right Node.js version is in the environment
+node -v # should print `v22.12.0`
+# verifies the right npm version is in the environment
+npm -v # should print `10.9.0`
+<<
+
+cd C:\Users\Max\Documents\ITMO\web\Lab_3\Task_1
+
+инит нода
+>>npm init -y
+
+MAYBE
+>>npm install --save-dev -sass
+
+Установка gulp
+>>npm install --save-dev gulp gulp-sass browser-sync gulp-contact
+
+Запуск gulp последовательно
+>>npx gulp build
+
+Запуск gulp параллельно
+>>npx gulp dev
