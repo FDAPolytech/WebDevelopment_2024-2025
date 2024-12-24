@@ -1,0 +1,76 @@
+<<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Показ веб-страниц</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        iframe {
+            width: 80%;
+            height: 80%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Показ веб-страниц</h1>
+    <input type="text" id="urlInput" placeholder="Введите URL" />
+    <input type="number" id="intervalInput" placeholder="Интервал (в секундах)" />
+    <button id="addUrl">Добавить URL</button>
+    <button id="startShow">Начать показ</button>
+    <button id="stopShow">Остановить показ</button>
+
+    <iframe id="webFrame"></iframe>
+
+    <script>
+        const urls = [];
+        let currentIndex = 0;
+        let intervalId;
+
+        document.getElementById('addUrl').onclick = function() {
+            const url = document.getElementById('urlInput').value;
+            if (url && !urls.includes(url)) {
+                urls.push(url);
+                alert("URL добавлен: " + url);
+                document.getElementById('urlInput').value = ''; // Очищаем поле ввода
+            } else {
+                alert("Введите корректный URL или он уже добавлен.");
+            }
+        };
+
+        document.getElementById('startShow').onclick = function() {
+            const interval = parseInt(document.getElementById('intervalInput').value) * 1000;
+            if (urls.length === 0) {
+                alert("Список URL пуст. Добавьте URL для показа.");
+                return;
+            }
+            if (isNaN(interval) || interval <= 0) {
+                alert("Введите корректный интервал.");
+                return;
+            }
+
+            clearInterval(intervalId);
+            currentIndex = 0; 
+            document.getElementById('webFrame').src = urls[currentIndex];
+
+            intervalId = setInterval(function() {
+                currentIndex = (currentIndex + 1) % urls.length; 
+                document.getElementById('webFrame').src = urls[currentIndex];
+            }, interval);
+        };
+
+        document.getElementById('stopShow').onclick = function() {
+            clearInterval(intervalId);
+            alert("Показ остановлен.");
+        };
+    </script>
+</body>
+</html>
