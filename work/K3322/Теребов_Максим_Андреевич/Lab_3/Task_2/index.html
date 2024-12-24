@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Обратная связь</h1>
+        <form action="submit.php" method="post">
+            <label for="firstname">Имя:</label>
+            <input type="text" id="firstname" name="firstname" required>
+
+            <label for="lastname">Фамилия:</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="feedback">Ваше сообщение:</label>
+            <textarea id="feedback" name="feedback" rows="5" required></textarea>
+
+            <label>Выберите категорию:</label>
+            <div>
+                <input type="radio" id="question" name="category" value="question" label="Вопрос" required label for="question">Вопрос</label>
+                <br>
+                <input type="radio" id="suggestion" name="category" value="suggestion" label for="suggestion">Предложение</label>
+                <br>
+            </div>
+
+            <label>Ваши предпочтения:</label>
+            <div>
+                <input type="checkbox" id="newsletter" name="preferences[]" value="newsletter" label for="newsletter">Получать новости</label>
+                <br>
+                <input type="checkbox" id="updates" name="preferences[]" value="updates" label for="updates">Обновления</label>
+                <br>
+                <input type="checkbox" id="promotions" name="preferences[]" value="promotions" label for="promotions">Акции</label>
+                <br>
+            </div>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>

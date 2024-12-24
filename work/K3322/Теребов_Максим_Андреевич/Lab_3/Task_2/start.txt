@@ -1,0 +1,10 @@
+cd C:\Users\Max\Documents\ITMO\web\Lab_3\Task_2
+
+Запуск php сервера
+php -S localhost:8000
+
+для POST'а
+http://localhost:8000/index.html
+
+Для get'а
+http://localhost:8000/submit.php?firstname=Иван&lastname=Иванов&email=ivan@example.com&feedback=Привет&category=question&preferences[]=newsletter&preferences[]=updates
