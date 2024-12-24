@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS orders_db;
+USE orders_db;
+
+CREATE TABLE IF NOT EXISTS orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    lastname VARCHAR(100) NOT NULL,
+    firstname VARCHAR(100) NOT NULL,
+    middlename VARCHAR(100),
+    address TEXT NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    product VARCHAR(100) NOT NULL,
+    comment TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
