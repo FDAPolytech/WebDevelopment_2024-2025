@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Заказ</title>
+
+</head>
+
+<body>
+
+    <h1>Оформите заказ:</h1>
+
+    <form action="order.php" method="post">
+
+        <fieldset>
+
+            <legend><strong>Заполните информацию о себе:</strong></legend>
+
+            <label for="surname">Фамилия:</label><br>
+
+            <input type="text" id="surname" name="surname" required><br><br>
+
+
+
+            <label for="name">Имя:</label><br>
+
+            <input type="text" id="name" name="name" required><br><br>
+
+
+
+            <label for="patronymic">Отчество:</label><br>
+
+            <input type="text" id="patronymic" name="patronymic"><br><br>
+
+
+
+            <label for="address">Адрес доставки:</label><br>
+
+            <textarea id="address" name="address" rows="3" required></textarea><br><br>
+
+
+
+            <label for="phone">Номер телефона:</label><br>
+
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+
+
+            <label for="email">Адрес электронной почты:</label><br>
+
+            <input type="email" id="email" name="email" required><br><br>
+
+        </fieldset>
+
+        <hr>
+
+        <fieldset>
+
+            <legend><strong>Добавьте продукты для доставки:</strong></legend>
+
+            <label for="product">Выберите категрию товаров:</label><br>
+
+            <select id="product" name="product" required>
+
+                <option value="Product 1">Техника</option>
+
+                <option value="Product 2">Продукты</option>
+
+                <option value="Product 3">Косметика</option>
+
+            </select><br><br>
+
+
+
+            <label for="comments">Комментарий по заказу:</label><br>
+
+            <textarea id="comments" name="comments" rows="4" placeholder="Leave your comments..."></textarea>
+
+        </fieldset>
+
+        <hr>
+
+        <button type="submit">Подтвердить заказ</button>
+
+    </form>
+
+</body>
+
+</html>
