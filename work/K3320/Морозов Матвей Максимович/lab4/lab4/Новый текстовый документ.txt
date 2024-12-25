@@ -1,0 +1,4 @@
+http://localhost/lab4/
+
+http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=shop_db&table=orders
+
