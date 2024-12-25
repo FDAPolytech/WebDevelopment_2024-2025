@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка</title>
+</head>
+
+<body>
+    <h1>Заполните Форму Доставки</h1>
+    <form action="process_order.php" method="POST">
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname" required><br><br>
+
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="patronymic">Отчество:</label>
+        <input type="text" id="patronymic" name="patronymic" required><br><br>
+
+        <label for="address">Адрес Доставки:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="email">Почта:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="product">Выбор продуктов:</label>
+        <select id="product" name="product" required>
+            <option value="product1">Часы</option>
+            <option value="product2">Книга</option>
+            <option value="product3">Наушники</option>
+        </select><br><br>
+
+        <label for="comment">Комментарий к заказу:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+
+</html>
