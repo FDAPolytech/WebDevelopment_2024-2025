@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая форма</title>
+</head>
+<body>
+    <h2>Контактная форма</h2>
+    <form id="contactForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Сообщение:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <label for="radio">Насколько оцениваете сервис:</label></form><br>
+        <input type="radio" id="option1" name="group1" value="1">
+        <label for="option1">1</label><br>
+
+        <input type="radio" id="option2" name="group1" value="2">
+        <label for="option2">2</label><br>
+
+        <input type="radio" id="option3" name="group1" value="3">
+        <label for="option1">3</label><br>
+
+        <label for="checkbox">Какой транспорт вы любите:</label>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Велосипед">
+        <label for="vehicle1">Велосипед</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Машина">
+        <label for="vehicle2">Машина</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"></label><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script src="./index.js"></script>
+</body>
+</html>
