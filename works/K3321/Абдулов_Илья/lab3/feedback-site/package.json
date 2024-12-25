@@ -9,7 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "bin-version-check": "^6.0.0",
     "browser-sync": "^3.0.3",
-    "gulp": "^5.0.0"
+    "gulp": "^5.0.0",
+    "gulp-livereload": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp-connect-php": "^1.0.3"
   }
 }

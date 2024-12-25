@@ -10,8 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $refer = htmlspecialchars(trim($_POST['refer']));
     $comments = htmlspecialchars(trim($_POST['comments']));
 
-    echo $name
-
     if (!empty($name) && !empty($email) && !empty($skill) && !empty($refer)) {
         $to = $email;
         $subject = "Ответы на форму от $name";
