@@ -1,0 +1,98 @@
+/* Общие стили для страницы */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f8fb; /* Светло-серый с оттенком голубого */
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+form {
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #e1e7ec;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 500px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 40px;
+  height: 60px;
+  width: 100%;
+}
+
+h1,
+h2 {
+  color: #4a4a4a;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Стили для всех меток */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+/* Стили для всех инпутов, текстовых областей и селектов */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #e1e7ec;
+  border-radius: 4px;
+  background-color: #f9fbfd;
+  font-size: 14px;
+  color: #4a4a4a;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #a0c1e8;
+  box-shadow: 0 0 5px rgba(160, 193, 232, 0.5);
+}
+
+/* Кнопка отправки */
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Стили для сообщений об ошибках или успехе */
+form p {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
