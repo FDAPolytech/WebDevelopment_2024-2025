@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Оставьте свой отзыв</h2>
+
+    <form action="feedback.php" method="post">
+
+        <label for="fullname">ФИО:</label>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <label for="email">Ваш email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <h3>Какие у Вас впечатления от нашей продукции?</h3>
+        <input type="radio" id="excellent" name="emotions" value="excellent">
+        <label for="excellent">Замечательные</label><br>
+        <input type="radio" id="good" name="emotions" value="good">
+        <label for="good">Хорошие</label><br>
+        <input type="radio" id="so_so" name="emotions" value="so_so">
+        <label for="so_so">Такие себе</label><br>
+
+        <h3>Какие товары Вы купили?</h3>
+        <input type="checkbox" id="product1" name="purchased[]" value="product1">
+        <label for="product1">Шоколадка</label><br>
+        <input type="checkbox" id="product2" name="purchased[]" value="product2">
+        <label for="product2">Морковка</label><br>
+        <input type="checkbox" id="product3" name="purchased[]" value="product3">
+        <label for="product3">Цемент</label><br>
+
+        <textarea name="comments" rows="4" cols="50" placeholder="Ваш отзыв"></textarea><br><br>
+
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>

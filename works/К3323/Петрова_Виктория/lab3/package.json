@@ -1,7 +1,7 @@
 {
   "name": "lab3",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
-    "gulp": "^5.0.0"
+  "dependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0",
+    "gulp-connect-php": "^1.0.3"
   }
 }
