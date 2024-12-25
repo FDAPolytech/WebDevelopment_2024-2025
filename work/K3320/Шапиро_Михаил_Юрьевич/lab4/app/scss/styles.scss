@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(120deg, #f0f2f5, #c1c9d6);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+h2 {
+    font-size: 1.8rem;
+    color: #0056a6;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Оформление контейнера формы */
+.form-container {
+    background: #fff;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для полей ввода и текста */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #0056a6;
+}
+.form-control, .form-control:focus, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #c8d1db;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+.form-control:focus {
+    border-color: #0056a6;
+    box-shadow: 0 0 5px rgba(0, 86, 166, 0.2);
+}
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+/* Радиокнопки и чекбоксы */
+.form-check-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.form-check-label {
+    margin-left: 8px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Стили для кнопки отправки */
+.submit-btn {
+    background: #0056a6;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+.submit-btn:hover {
+    background: #003d75;
+}
+
+.order-form-wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* 
+order_form
+*/
+
+.order-form-wrapper h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.order-form-wrapper label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.order-form-wrapper input[type="text"],
+.order-form-wrapper input[type="tel"],
+.order-form-wrapper input[type="email"],
+.order-form-wrapper select,
+.order-form-wrapper textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.order-form-wrapper input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.order-form-wrapper input[type="submit"]:hover {
+    background-color: #45a049;
+}
