@@ -1,0 +1,81 @@
+﻿@page
+@model WebLab3Task2.Pages.IndexModel
+<form method="post">
+    <div> 
+        <label asp-for="UserProfile.LastName">Фамилия:</label>
+        <input name="UserProfile.LastName" />
+    </div>
+
+    <div>
+        <label asp-for="UserProfile.FirstName">Имя:</label>
+        <input name="UserProfile.FirstName" />
+    </div>
+
+    <div>
+        <label asp-for="UserProfile.Email">Электронная почта:</label>
+        <input type="email" name="UserProfile.Email" />
+    </div>
+
+    <div>
+        <p>Выберите животное:</p>
+        <input type="radio" id="cat" name="UserProfile.Animal" value="Кот" />
+        <label for="cat">Коты</label><br />
+        <input type="radio" id="dog" name="UserProfile.Animal" value="Собака" />
+        <label for="dog">Собаки</label>
+    </div>
+
+    <div>
+        <p>Выберите транспортное средство:</p>
+        <input type="checkbox" id="bicycle" name="UserProfile.Transport" value="Велосипед" />
+        <label for="bicycle">Велосипед</label><br />
+        <input type="checkbox" id="motorcycle" name="UserProfile.Transport" value="Мотоцикл" />
+        <label for="motorcycle">Мотоцикл</label><br />
+        <input type="checkbox" id="car" name="UserProfile.Transport" value="Машина" />
+        <label for="car">Автомобиль</label>
+    </div>
+
+    <input type="submit" value="Отправить" />
+</form>
+
+
+<h1>Профиль пользователя</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Поле</th>
+            <th>Значение</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Фамилия</td>
+            <td>@Model.UserProfile.LastName</td>
+        </tr>
+        <tr>
+            <td>Имя</td>
+            <td>@Model.UserProfile.FirstName</td>
+        </tr>
+        <tr>
+            <td>Электронная почта</td>
+            <td>@Model.UserProfile.Email</td>
+        </tr>
+        <tr>
+            <td>Животное</td>
+            <td>@Model.UserProfile.Animal</td>
+        </tr>
+        <tr>
+            <td>Транспортные средства</td>
+            <td>
+                @foreach (var transport in Model.UserProfile.Transport)
+                {
+                    <span>@transport</span>
+
+                    <br />
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<hr />

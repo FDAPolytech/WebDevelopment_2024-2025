@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <style>
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit_feedback" method="post">
+        <label for="firstName">Имя:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Фамилия:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="feedback">Обратная связь:</label>
+        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea>
+
+        <fieldset>
+            <legend>Выберите предпочитаемый способ связи:</legend>
+            <label><input type="radio" name="contactMethod" value="phone" checked> Телефон</label>
+            <label><input type="radio" name="contactMethod" value="email"> Электронная почта</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Укажите интересующие Вас темы:</legend>
+            <label><input type="checkbox" name="interests[]" value="web_development"> Веб-разработка</label>
+            <label><input type="checkbox" name="interests[]" value="mobile_apps"> Мобильные приложения</label>
+            <label><input type="checkbox" name="interests[]" value="data_science"> Анализ данных</label>
+        </fieldset>
+
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
