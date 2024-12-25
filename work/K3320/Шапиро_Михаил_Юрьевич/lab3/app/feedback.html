@@ -1,0 +1,60 @@
+<!-- feedback.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Форма обратной связи</h2>
+        <form id="feedbackForm" action="process.php" method="post" novalidate>
+            <div class="form-group">
+                <label for="firstname">Имя</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Фамилия</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Электронная почта</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Обратная связь</label>
+                <textarea class="form-control" id="feedback" name="feedback" required></textarea>
+            </div>
+            <div class="form-group">
+                <p>Выберите пол:</p>
+                <div class="form-check-group">
+                    <input type="radio" class="form-check-input" name="gender" id="male" value="Мужской" required>
+                    <label for="male" class="form-check-label">Мужской</label>
+                </div>
+                <div class="form-check-group">
+                    <input type="radio" class="form-check-input" name="gender" id="female" value="Женский">
+                    <label for="female" class="form-check-label">Женский</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <p>Выберите интересующие темы:</p>
+                <div class="form-check-group">
+                    <input type="checkbox" class="form-check-input" id="topic1" name="topics[]" value="Тема 1">
+                    <label for="topic1" class="form-check-label">Тема 1</label>
+                </div>
+                <div class="form-check-group">
+                    <input type="checkbox" class="form-check-input" id="topic2" name="topics[]" value="Тема 2">
+                    <label for="topic2" class="form-check-label">Тема 2</label>
+                </div>
+                <div class="form-check-group">
+                    <input type="checkbox" class="form-check-input" id="topic3" name="topics[]" value="Тема 3">
+                    <label for="topic3" class="form-check-label">Тема 3</label>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+    </div>
+
+</body>
+</html>
