@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WebLab4Task1.props" />
+</Project>

@@ -1,0 +1,47 @@
+﻿@page
+@model WebLab4Task1.Pages.IndexModel
+@{
+    <h1>Оформление заказа</h1>
+
+    <form method="post">
+        <div>
+            <label asp-for="Person.Surname">Фамилия:</label>
+            <input name="Person.Surname" />
+        </div>
+
+        <div>
+            <label asp-for="Person.Name">Имя:</label>
+            <input name="Person.Name" />
+        </div>
+
+        <div>
+            <label asp-for="Person.Address">Адрес:</label>
+            <input name="Person.Address" />
+        </div>
+
+
+        <div>
+            <label asp-for="Person.Email">Электронная почта:</label>
+            <input name="Person.Email" />
+        </div>
+
+        <div>
+            <p>Выберите товар:</p>
+            <input type="radio" id="laptop" name="Person.Product" value="Ноутбук" />
+            <label for="laptop">Ноутбук</label><br />
+            <input type="radio" id="bottle" name="Person.Product" value="Бутылка" />
+            <label for="bottle">Бутылка</label>
+            <input type="radio" id="plate" name="Person.Product" value="Тарелка" />
+            <label for="plate">Тарелка</label>
+            <input type="radio" id="tv" name="Person.Product" value="Телевизор" />
+            <label for="tv">Телевизор</label>
+        </div>
+
+        <div>
+            <label asp-for="Person.Comment">Комментарий по заказу:</label>
+            <input name="Person.Comment" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Отправить заказ</button>
+    </form>
+}
