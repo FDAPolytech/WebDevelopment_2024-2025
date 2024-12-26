@@ -1,0 +1,7 @@
+C:\Users\Эдуард\HTML\Lab4\Task3\WebLab4Task3\WebLab4Task3\bin\Debug\WebLab4Task3.exe.config
+C:\Users\Эдуард\HTML\Lab4\Task3\WebLab4Task3\WebLab4Task3\bin\Debug\WebLab4Task3.exe
+C:\Users\Эдуард\HTML\Lab4\Task3\WebLab4Task3\WebLab4Task3\bin\Debug\WebLab4Task3.pdb
+C:\Users\Эдуард\HTML\Lab4\Task3\WebLab4Task3\WebLab4Task3\obj\Debug\WebLab4Task3.csproj.AssemblyReference.cache
+C:\Users\Эдуард\HTML\Lab4\Task3\WebLab4Task3\WebLab4Task3\obj\Debug\WebLab4Task3.csproj.CoreCompileInputs.cache
+C:\Users\Эдуард\HTML\Lab4\Task3\WebLab4Task3\WebLab4Task3\obj\Debug\WebLab4Task3.exe
+C:\Users\Эдуард\HTML\Lab4\Task3\WebLab4Task3\WebLab4Task3\obj\Debug\WebLab4Task3.pdb
