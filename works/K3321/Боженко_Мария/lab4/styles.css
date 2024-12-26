@@ -1,0 +1,65 @@
+/* Общие стили для всего документа */
+body {
+    font-family: 'Arial', sans-serif; /* Шрифт для всего тела */
+    background-color: #f4f4f4; /* Цвет фона страницы */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем отступы */
+    display: flex; /* Используем flexbox для центрирования */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    height: 100vh; /* Высота вьюпорта */
+}
+
+/* Стили для заголовка */
+h1 {
+    text-align: center; /* Центрируем заголовок */
+    color: #35424a; /* Цвет заголовка */
+}
+
+/* Стили для формы */
+.contact-form {
+    background-color: white; /* Цвет фона формы */
+    border-radius: 8px; /* Закругленные углы формы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для формы */
+    padding: 30px; /* Внутренние отступы формы */
+    width: 300px; /* Ширина формы */
+}
+
+/* Стили для полей ввода и текстовой области */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%; /* Занять всю ширину родителя */
+    padding: 10px; /* Отступы внутри полей */
+    margin-bottom: 15px; /* Отступ между полями */
+    border: 1px solid #ccc; /* Граница полей */
+    border-radius: 5px; /* Закругленные углы */
+    font-size: 16px; /* Размер шрифта */
+}
+
+/* Стили для выпадающего списка */
+.contact-form select {
+    -webkit-appearance: none; /* Убираем стандартный стиль для Safari */
+    -moz-appearance: none; /* Убираем стандартный стиль для Firefox */
+    appearance: none; /* Убираем стандартный стиль для остальных браузеров */
+    background-color: white; /* Цвет фона выпадающего списка */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2335424a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'); /* Стрелка вниз */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Позиция стрелки */
+    background-size: 12px; /* Размер стрелки */
+}
+
+/* Стили для кнопки отправки */
+.contact-form input[type="submit"] {
+    background-color: #35424a; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругленные углы кнопки */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #45a049; /* Цвет кнопки при наведении */
+}
