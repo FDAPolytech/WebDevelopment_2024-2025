@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Регистрация </title>
+</head>
+<body>
+<form method = "POST" action="handler.php">
+	Фамилия: <input type = "text" name = "last_name" /><br />
+	
+	Имя: <input type = "text" name = "first_name" /><br />
+	
+	Электронная почта: <input type = "email" name = "mail" /><br/>
+	Описание профиля: <br /><textarea name = "desc"></textarea><br />
+	<p><input type = "radio" name = "MyRadio" value = "Гражданин России">Гражданин России</p>
+	<p><input type = "radio" name = "MyRadio" value = "Не гражданин России">Не гражданин России</p>
+	<p><input type = "checkbox" name = "MyCheckBox[]" value = "Согласие с условиями лицензионного соглашения">Согласие с условиями лицензионного соглашения (Обязательно)</p>
+	<p><input type = "checkbox" name = "MyCheckBox[]" value = "Согласие на обработку персональных данных">Согласие на обработку персональных данных (Обязательно)</p>
+	<p><input type = "checkbox" name = "MyCheckBox[]" value = "Подписка на нашу информационную рассылку">Подписка на нашу информационную рассылку</p>
+	<p><input type = "submit" name = "submit" value = "Отправить">
+</form>
+</body>
