@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>Обратная связь</h1>
+    <form action="feedback.php" method="post">
+        <label for="firstName">Имя:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Фамилия:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="feedback">Ваш отзыв:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+
+        <p>Выберите одну из опций:</p>
+        <label><input type="radio" name="option" value="К3320" required>Группа К3320</label><br>
+        <label><input type="radio" name="option" value="К3321" required>Группа К3321</label><br>
+        <label><input type="radio" name="option" value="К3322" required>Группа К3322</label><br>
+        <label><input type="radio" name="option" value="К3323" required>Группа К3323</label><br><br>
+
+        <p>Выберите опции (можно несколько):</p>
+        <label><input type="checkbox" name="checkbox1" value="Комфортная атмосфера на занятии">Комфортная атмосфера на занятии</label><br>
+        <label><input type="checkbox" name="checkbox2" value="Четкие дедлайны">Четкие дедлайны</label><br>
+        <label><input type="checkbox" name="checkbox3" value="Вовремя выставлены баллы">Вовремя выставлены баллы</label><br><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
