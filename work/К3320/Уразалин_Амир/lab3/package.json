@@ -1,0 +1,19 @@
+{
+  "name": "3",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "serve": "gulp serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "del": "^8.0.0",
+    "gulp": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^6.0.0"
+  }
+}
