@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заказа</title>
+</head>
+<body>
+    <h1>Форма заказа</h1>
+    <form action="process_order.php" method="POST">
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname" required><br><br>
+
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="patronymic">Отчество:</label>
+        <input type="text" id="patronymic" name="patronymic"><br><br>
+
+        <label for="address">Адрес доставки:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="product">Выберите товар:</label>
+        <select id="product" name="product" required>
+            <option value="Пылесос">Пылесос</option>
+            <option value="Кастрюля">Кастрюля</option>
+            <option value="Монитор">Монитор</option>
+        </select><br><br>        
+
+        <label for="comment">Комментарий:</label>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
