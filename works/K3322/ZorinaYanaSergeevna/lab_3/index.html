@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with POST and GET</title>
+    <link rel="stylesheet" href="Form.css" />
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Submit Data via POST</h1>
+
+        <form id="postForm" action="save_data.php" method="post" target="_blank">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required />
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required />
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="feedback">Message:</label>
+            <textarea id="feedback" name="feedback" required></textarea>
+
+            <fieldset>
+                <legend>Choose an Option:</legend>
+
+                <input type="radio" id="option1" name="option" value="option1" required />
+                <label for="option1">Option 1</label>
+
+                <input type="radio" id="option2" name="option" value="option2" />
+                <label for="option2">Option 2</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select Checkboxes:</legend>
+
+                <input type="checkbox" id="checkbox1" name="checkbox[]" value="option1" />
+                <label for="checkbox1">Checkbox 1</label>
+
+                <input type="checkbox" id="checkbox2" name="checkbox[]" value="option2" />
+                <label for="checkbox2">Checkbox 2</label>
+
+                <input type="checkbox" id="checkbox3" name="checkbox[]" value="option3" />
+                <label for="checkbox3">Checkbox 3</label>
+            </fieldset>
+
+            <button type="submit">Submit Data</button>
+        </form>
+    </div>
+</body>
+
+</html>
