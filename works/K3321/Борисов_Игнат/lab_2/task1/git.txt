@@ -1,0 +1,1 @@
+Git успешно установлен и настроен. Проект: https://github.com/Telezhka-the-First/WebDevelopment_2024-2025/
