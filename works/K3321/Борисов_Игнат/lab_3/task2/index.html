@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+</head>
+<body>
+    <h1>Форма обратной связи</h1>
+    <form action="process.php" method="POST">
+        <label for="first_name">Имя:</label><br>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+        
+        <label for="last_name">Фамилия:</label><br>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+        
+        <label for="email">Электронная почта:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="feedback">Ваш отзыв:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="40" required></textarea><br><br>
+        
+        <p>Выберите одну из следующих категорий:</p>
+        <input type="radio" id="category1" name="category" value="вопрос" required>
+        <label for="category1">Вопрос</label><br>
+        <input type="radio" id="category2" name="category" value="предложение">
+        <label for="category2">Предложение</label><br><br>
+        
+        <p>Дополнительные параметры:</p>
+        <input type="checkbox" id="option1" name="options[]" value="получать новости">
+        <label for="option1">Получать новости</label><br>
+        <input type="checkbox" id="option2" name="options[]" value="получать акции">
+        <label for="option2">Получать акции</label><br>
+        <input type="checkbox" id="option3" name="options[]" value="подписаться на рассылку">
+        <label for="option3">Подписаться на рассылку</label><br><br>
+        
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
